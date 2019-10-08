@@ -1,1 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
+
+.slide1{
+    position: relative;
+    .fa-chevron-left{
+        position: absolute;
+        z-index: 1;
+        font-size: 30px;
+        color: #fff;
+        top: 48%;
+        left: 20px;
+    }
+    .fa-chevron-right{
+        position: absolute;
+        z-index: 1;
+        font-size: 30px;
+        color: #fff;
+        top: 48%;
+        right: 20px;
+    }
+}
+.slick2{
+    position: relative;
+    .fa-chevron-left{
+        position: absolute;
+        z-index: 1;
+        font-size: 30px;
+        color: #444;
+        top: 40%;
+        left: -35px;
+    }
+    .fa-chevron-right{
+        position: absolute;
+        z-index: 1;
+        font-size: 30px;
+        color: #444;
+        top: 40%;
+        right: -35px;
+    }
+}
