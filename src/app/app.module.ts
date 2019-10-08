@@ -16,8 +16,8 @@ import { NormalLayoutComponent } from './normal-layout/normal-layout.component';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    AboutUsComponent,
-    ContactUsComponent,
+    // AboutUsComponent,
+    // ContactUsComponent,
     NormalLayoutComponent
   ],
   imports: [
