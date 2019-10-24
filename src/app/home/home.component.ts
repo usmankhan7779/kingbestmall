@@ -11,6 +11,12 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
 
+    $('.autoplay').slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 2000,
+    });
 
     $('.slick1').slick({
       infinite:true,
@@ -57,6 +63,8 @@ export class HomeComponent implements OnInit {
         }
       ] 
     });
+
+   
 
   }
 
