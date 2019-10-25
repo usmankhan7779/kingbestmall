@@ -31,10 +31,10 @@ export class HomeComponent implements OnInit {
 
     $('.slick2').slick({
       infinite:true,
-      autoplay:true,
+      // autoplay:true,
       dots: false,
       speed: 300,
-      slidesToShow: 4,
+      slidesToShow: 5,
       slidesToScroll: 1,
       nextArrow: '<i class="fa fa-chevron-left" ></i>',
       prevArrow: '<i class="fa fa-chevron-right" ></i>',

@@ -42,8 +42,39 @@
         }
     }
 }
-  
-
+.block2-img{
+    height: 281px;
+    img{
+        max-width: 100%;
+        max-height: 100%;
+        text-align: center;
+        margin: 0 auto;
+    }
+}
+.wrap-slick2{
+    .block2-txt , .block2-name{
+        font-weight: bold;
+        color: #000;
+    }
+}
+.see-all-btn{
+    text-align: center;
+    margin: 20px;
+    a{
+        padding: 5px 20px;
+        background: #eb2029;
+        color: #fff;
+        border-radius: 5px;
+        font-size: 18px;
+        box-shadow: 0 0 12px #ccc;
+        border: 1px solid #eb2029;
+        &:hover{
+            border: 1px solid #eb2029;
+            background: #fff;
+            color: #eb2029;
+        }
+    }
+}
 .soical-icon{
     margin-top: 10px;
     i{
