@@ -11,11 +11,12 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
 
-    $('.autoplay').slick({
-      slidesToShow: 3,
+    $('.tarck').slick({
+      slidesToShow: 5,
       slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 2000,
+      autoplay:true,
+      nextArrow: '<i class="fa fa-chevron-left" ></i>',
+      prevArrow: '<i class="fa fa-chevron-right" ></i>', 
     });
 
     $('.slick1').slick({

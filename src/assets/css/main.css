@@ -512,7 +512,7 @@ iframe {
   -o-transition: all 0.3s;
   -moz-transition: all 0.3s;
   transition: all 0.3s;
-  z-index: 1;
+  z-index: 2;
   position: fixed;
   top: 0;
   left: 0;
@@ -1418,14 +1418,6 @@ li.sale-noti > a {
 /*[ Slide1 ]
 ///////////////////////////////////////////////////////////
 */
-.cat-slider{
-  position: absolute;
-  bottom: 0;
-}
-.cat-box{
-  display: flex;
-  flex-direction: column;
-}
 
 /*[ Slick1 ]
 -----------------------------------------------------------

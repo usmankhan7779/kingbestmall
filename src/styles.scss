@@ -5,7 +5,7 @@
     margin-top: 141px;
     height: 450px;
     overflow: hidden;
-    border-radius: 0 0 390px 0;
+    border-radius: 0;
     box-shadow: 0 0 12px #4c4b4b;
     .fa-chevron-left{
         position: absolute;
@@ -24,6 +24,18 @@
         top: 48%;
         right: 20px;
         display: none !important;
+    }
+}
+.cat-slider{
+    .fa-chevron-left{
+        display: inline-block !important;
+        top: 39%;
+        left: -34px;
+    }
+    .fa-chevron-right{
+        display: inline-block !important;
+        top: 39%;
+        right: -34px;
     }
 }
 .slick2{
