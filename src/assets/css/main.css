@@ -673,7 +673,7 @@ iframe {
 }
 .menu-bar ul li a{
   font-size: 12px;
-  font-weight: bold;
+  font-weight: normal;
 }
 .wrap_header {
   display: -webkit-box;

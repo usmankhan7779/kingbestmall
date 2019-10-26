@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
-
+*{
+    font-family: "Market Sans", Arial, sans-serif;
+}
 .slide1{
     position: relative;
     margin-top: 141px;
@@ -14,7 +16,6 @@
         color: #fff;
         top: 48%;
         left: 20px;
-        display: none !important;
     }
     .fa-chevron-right{
         position: absolute;
@@ -23,7 +24,6 @@
         color: #fff;
         top: 48%;
         right: 20px;
-        display: none !important;
     }
 }
 .cat-slider{

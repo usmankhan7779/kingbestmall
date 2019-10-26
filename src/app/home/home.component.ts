@@ -22,6 +22,7 @@ export class HomeComponent implements OnInit {
     $('.slick1').slick({
       infinite:true,
       dots: false,
+      autoplay:true,
       speed: 300,
       slidesToShow: 1,
       slidesToScroll: 1,
