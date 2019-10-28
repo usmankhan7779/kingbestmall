@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { NormalLayoutComponent } from './normal-layout/normal-layout.component';
+
+import { NormalLayoutComponent } from './layouts/normal-layout/normal-layout.component';
+import { HomeComponent } from './component/home/home.component';
+import { SingleProductComponent } from './component/single-product/single-product.component';
 
 
 const routes: Routes = [
@@ -10,13 +12,15 @@ const routes: Routes = [
     path: '',
     component: NormalLayoutComponent,
     children: [
-      { path: 'contactus', loadChildren: './contact-us/contactus.module#ContactusModule' },
-      { path: 'aboutus', loadChildren: './about-us/aboutus.module#AboutusModule' },
+      { path: 'contactus', loadChildren: './component/contact-us/contactus.module#ContactusModule' },
+      { path: 'aboutus', loadChildren: './component/about-us/aboutus.module#AboutusModule' },
+      { path: 'single-product',  component: SingleProductComponent   },
       //  { path : 'viewuser' , component: ViewuserComponent},
       // { path: 'viewreply', loadChildren: './viewuserreply/viewuserreply.module#ViewUserReplyModule', canActivate: [AuthGuard] },
       // { path: 'paymentsingleDetail', loadChildren: './siglepayment-details/siglepayment-details.module#ViewpaymentSingleModule', canActivate: [AuthGuard] },
     ]
-    }
+    },
+    
 ];
 
 @NgModule({
