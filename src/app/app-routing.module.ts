@@ -14,7 +14,9 @@ const routes: Routes = [
     children: [
       { path: 'contactus', loadChildren: './component/contact-us/contactus.module#ContactusModule' },
       { path: 'aboutus', loadChildren: './component/about-us/aboutus.module#AboutusModule' },
-      { path: 'single-product',  component: SingleProductComponent   },
+      { path: 'single-product',  loadChildren: './component/single-product/single-product..module#SingleProductModule'   },
+      { path: 'login', loadChildren: './authentication/login/login.module#LoginModule' },
+      // LoginModule        
       //  { path : 'viewuser' , component: ViewuserComponent},
       // { path: 'viewreply', loadChildren: './viewuserreply/viewuserreply.module#ViewUserReplyModule', canActivate: [AuthGuard] },
       // { path: 'paymentsingleDetail', loadChildren: './siglepayment-details/siglepayment-details.module#ViewpaymentSingleModule', canActivate: [AuthGuard] },
