@@ -14,15 +14,32 @@ export class HomeService {
 
 
   constructor(private http: HttpClient) { }
-    // /metrics/metric/11
+   
     Getall_cat(): Observable<any> {
-      return this.http.get(this.baseUrl + 'Getallcat')
-        .pipe(
+      return this.http.get(this.baseUrl + 'Getallcat').pipe(
           tap(_ => {
           }, error => {
             console.log(error);
           })
         );
     }
+    Getlikeforyou(): Observable<any> {
+      return this.http.get(this.baseUrl + 'getFunProductsHome/').pipe(
+          tap(_ => {
+          }, error => {
+            console.log(error);
+          })
+        );
+    }
+  //   Getlikeforyou() {
+  
+  //     // let headers = new Headers();
+  //     // headers.append('Content-Type', 'application/json');
+   
+  //     // // console.log('pofile', localStorage.getItem('Authorization'));
+  //     return this.http.get(this.baseUrl + 'getFunProductsHome/', { headers: headers }).map(response => response.json());
+     
+  //     // https://apis.officedoor.ai/office/property_detail_by_id/465/
+  // }
   
 }

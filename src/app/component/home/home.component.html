@@ -110,10 +110,16 @@
         <div class="cat-slider">
             <div class="inner">
                     <div class="tarck">
-                        
+
                             <div class="cat-box" *ngFor="let category of GetallCat">
-                                <img  src="{{imageurls}}{{category.Pic}}">
-                                <label>Item Name</label>
+                                    <a [routerLink]="['/category-detail']" [queryParams]="{ CatName:  category.Cat_Name }">
+                                        <img style="border: none" class="img" src="{{imageurls}}{{category.Pic}}">
+                                      </a>
+                                <!-- <img  src="{{imageurls}}{{category.Pic}}"> -->
+                                <a class="slider-img" [routerLink]="['/category-detail']" [queryParams]="
+                                { CatName:  category.Cat_Name }" style="color: white">
+                                 {{category.Cat_Name }} </a>
+                                
                             </div>
 
                             <!-- <div class="homeSlider">
@@ -972,6 +978,44 @@
     </div>
 </section>
 
+<section class="blog bgwhite p-t-94 p-b-65">
+    <div class="container">
+        <div class="sec-title p-b-52">
+            <h3 class="m-text5 t-center">
+              KingBestMall For You
+            </h3>
+        </div>
+
+        <div class="row">
+
+            <div class="col-sm-10 col-md-3 p-b-30 m-l-r-auto">
+                <!-- Block3 -->
+                <div class="block3">
+                    <a href="blog-detail.html" class="block3-img dis-block hov-img-zoom">
+                        <img src="../assets/images/blog-03.jpg" alt="IMG-BLOG">
+                    </a>
+
+                    <div class="block3-txt p-t-14">
+                        <h4 class="p-b-7">
+                            <a href="blog-detail.html" class="m-text11">
+                                Johnny's Custom Jewelry
+                            </a>
+                        </h4>
+
+                        <p class="s-text7">Store Contact: Sam</p>
+                        <p class="s-text7">Contact Number: (832) 656-4911</p>
+                        <p class="s-text7">Instagram: Kingjohnnycustomjewelry</p>
+
+
+                    </div>
+                </div>
+            </div>
+            
+
+
+        </div>
+    </div>
+</section>
 <!-- Blog -->
 <section class="blog bgwhite p-t-94 p-b-65">
     <div class="container">

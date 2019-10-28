@@ -8,6 +8,7 @@ declare var $:any;
 })
 export class HomeComponent implements OnInit {
   GetallCat :any=[];
+  GetKingforyou :any=[];
   imageurls = 'https://storage.dhaar.pk/final/';
   constructor(private http: HomeService) { }
 
@@ -15,6 +16,7 @@ export class HomeComponent implements OnInit {
   
 
 this.get_metrics_dasboard();
+this.Getlikeforyou();
     // $('.tarck').slick({
     //   slidesToShow: 5,
     //   slidesToScroll: 1,
@@ -73,6 +75,19 @@ this.get_metrics_dasboard();
    
 
   }
+
+
+
+  Getlikeforyou() {
+
+    this.http.Getlikeforyou().subscribe(
+      res => {
+this.GetKingforyou = res;
+console.log(res.Results)
+
+
+})
+  }
   get_metrics_dasboard() {
 
     this.http.Getall_cat().subscribe(
@@ -87,8 +102,10 @@ if (this.GetallCat) {
       slidesToShow: 6,
       slidesToScroll: 1,
       autoplay: true,
-      prevArrow: '<button class="leftRs" style="left: 30px;"><i class="fa fa-angle-left"></i></button>',
-      nextArrow: '<button class="rightRs" style="right: 30px;"><i class="fa fa-angle-right"></i></button>',
+      nextArrow: '<i class="fa fa-chevron-left" ></i>',
+     prevArrow: '<i class="fa fa-chevron-right" ></i>', 
+      // prevArrow: '<button class="leftRs" style="left: 30px;"><i class="fa fa-angle-left"></i></button>',
+      // nextArrow: '<button class="rightRs" style="right: 30px;"><i class="fa fa-angle-right"></i></button>',
 
       responsive: [
         {
