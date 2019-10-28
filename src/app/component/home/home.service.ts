@@ -31,6 +31,26 @@ export class HomeService {
           })
         );
     }
+
+    Get_productfromAll(): Observable<any> {
+      return this.http.get(this.baseUrl + 'getProductsfromAllCAtHome/').pipe(
+          tap(_ => {
+          }, error => {
+            console.log(error);
+          })
+        );
+    }
+
+    GetAllFeaturedProducts(): Observable<any> {
+      return this.http.get(this.baseUrl + 'getFeaturedProductHome/').pipe(
+          tap(_ => {
+          }, error => {
+            console.log(error);
+          })
+        );
+    }
+
+    
   //   Getlikeforyou() {
   
   //     // let headers = new Headers();
