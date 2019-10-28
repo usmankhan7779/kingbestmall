@@ -110,7 +110,29 @@
         <div class="cat-slider">
             <div class="inner">
                     <div class="tarck">
-                            <div class="cat-box">
+                        
+                            <div class="cat-box" *ngFor="let category of GetallCat">
+                                <img  src="{{imageurls}}{{category.Pic}}">
+                                <label>Item Name</label>
+                            </div>
+
+                            <!-- <div class="homeSlider">
+                                <div class="item"  *ngFor="let category of GetallCat">
+                                    <div class="image">
+                                      <a [routerLink]="['/category-detail']" [queryParams]="{ CatName:  category.Cat_Name }">
+                                        <img style="border: none" class="img" src="{{imageurls}}{{category.Pic}}">
+                                      </a>
+                                    </div>
+                                    <div class="slide-overlay">
+                                      <h4 class="card-title">
+                                        <a class="slider-img" [routerLink]="['/category-detail']" [queryParams]="
+                                        { CatName:  category.Cat_Name }" style="color: white">{{
+                                          category.Cat_Name }}</a>
+                                      </h4>
+                                    </div>
+                                </div>
+                            </div> -->
+                            <!-- <div class="cat-box">
                                 <img src="https://storage.dhaar.pk/final/health_111111111.png">
                                 <label>Item Name</label>
                             </div>
@@ -133,11 +155,7 @@
                             <div class="cat-box">
                                 <img src="https://storage.dhaar.pk/final/health_111111111.png">
                                 <label>Item Name</label>
-                            </div>
-                            <div class="cat-box">
-                                <img src="https://storage.dhaar.pk/final/health_111111111.png">
-                                <label>Item Name</label>
-                            </div>
+                            </div> -->
                         </div>
             </div>
         </div>
