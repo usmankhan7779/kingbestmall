@@ -43,7 +43,7 @@ import { HttpInterceptors } from './services/_intercepters/http.interceptors';
       provide: HTTP_INTERCEPTORS,
       useClass: HttpInterceptors,
       multi: true
-    },
+    }
     ,HomeService],
   bootstrap: [AppComponent]
 })
