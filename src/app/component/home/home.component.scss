@@ -42,13 +42,26 @@
         }
     }
 }
+.block2-txt{
+    margin: 10px 10px 0;
+    .s-text3{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-weight: bold;
+    }  
+}
 .block2-img{
     height: 281px;
+    margin: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     img{
         max-width: 100%;
         max-height: 100%;
-        text-align: center;
         margin: 0 auto;
+        width: auto;
     }
 }
 .wrap-slick2{
@@ -93,5 +106,17 @@
         min-height: 63px;
         display: flex;
         align-items: center;
+    }
+}
+.show-data{
+    display: flex;
+    flex-wrap: wrap;
+    .block2{
+        width: 195px;
+        max-width: 195px;
+        margin-bottom: 40px;
+    }
+    .block2-img{
+        height: 190px;
     }
 }

@@ -15,6 +15,48 @@ export class HomeComponent implements OnInit {
   GetALLFeaturedProductss: any = [];
   constructor(private http: HomeService) { }
 
+  slideConfig = {
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    autoplay: true,
+    prevArrow: '<button class="slick-main-btn-left"><i class="fa fa fa-chevron-left"></i></button>',
+    nextArrow: '<button class="slick-main-btn-right"><i class="fa fa-chevron-right"></i></button>',
+    infinite: true,
+    responsive: [
+      {
+        breakpoint: 1154,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 4,
+          infinite: true
+        }
+      },
+      {
+        breakpoint: 942,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true
+        }
+      },
+      {
+        breakpoint: 730,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 512,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+
+    ]
+  };
+
   ngOnInit() {
 
 
@@ -26,7 +68,7 @@ export class HomeComponent implements OnInit {
     $('.slick1').slick({
       infinite: true,
       dots: false,
-      autoplay: true,
+      autoplay: false,
       speed: 300,
       slidesToShow: 1,
       slidesToScroll: 1,
@@ -71,43 +113,43 @@ export class HomeComponent implements OnInit {
         
   
         }
-        $('.slick2').fadeOut(0);
+        // $('.slick2').fadeOut(0);
         if (this.GetAll_products) {
           setTimeout(function () {
-            $('.slick2').slick({
-              infinite: true,
-              slidesToShow: 6,
-              slidesToScroll: 1,
-              autoplay: true,
-              nextArrow: '<i class="fa fa-chevron-left" ></i>',
-              prevArrow: '<i class="fa fa-chevron-right" ></i>',
-              // prevArrow: '<button class="leftRs" style="left: 30px;"><i class="fa fa-angle-left"></i></button>',
-              // nextArrow: '<button class="rightRs" style="right: 30px;"><i class="fa fa-angle-right"></i></button>',
+            // $('.slick2').slick({
+            //   infinite: true,
+            //   slidesToShow: 6,
+            //   slidesToScroll: 1,
+            //   autoplay: true,
+            //   nextArrow: '<i class="fa fa-chevron-left" ></i>',
+            //   prevArrow: '<i class="fa fa-chevron-right" ></i>',
+            //   // prevArrow: '<button class="leftRs" style="left: 30px;"><i class="fa fa-angle-left"></i></button>',
+            //   // nextArrow: '<button class="rightRs" style="right: 30px;"><i class="fa fa-angle-right"></i></button>',
 
-              responsive: [
-                {
-                  breakpoint: 1199,
-                  settings: {
-                    slidesToShow: 3,
-                    infinite: true
-                  }
-                },
-                {
-                  breakpoint: 767,
-                  settings: {
-                    slidesToShow: 2,
-                  }
-                },
-                {
-                  breakpoint: 639,
-                  settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                  }
-                }
+            //   responsive: [
+            //     {
+            //       breakpoint: 1199,
+            //       settings: {
+            //         slidesToShow: 3,
+            //         infinite: true
+            //       }
+            //     },
+            //     {
+            //       breakpoint: 767,
+            //       settings: {
+            //         slidesToShow: 2,
+            //       }
+            //     },
+            //     {
+            //       breakpoint: 639,
+            //       settings: {
+            //         slidesToShow: 1,
+            //         slidesToScroll: 1
+            //       }
+            //     }
 
-              ]
-            });
+            //   ]
+            // });
           }, 0);
         }
         $('.slick2').fadeIn(500).delay(200);

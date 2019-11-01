@@ -220,11 +220,11 @@
 
         <!-- Slide2 -->
         <div class="wrap-slick2">
-            <div class="slick2">
+            <div class="">
 
-                <div *ngFor="let latest of GetAll_products" class="item-slick2 p-l-15 p-r-15">
+                <ngx-slick class="carousel item-slick2 p-l-15 p-r-15" #slickModal="slick-modal" [config]="slideConfig" class="">
                     <!-- Block2 -->
-                    <div class="block2">
+                    <div  class="slide" ngxSlickItem  *ngFor="let latest of GetAll_products">
                         <div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew">
                             <img src="{{latest.Pic}}" onerror="this.src='../../assets/images/icons/logo 11.png'"  >
 
@@ -243,7 +243,7 @@
                             </div>
                         </div>
 
-                        <div class="block2-txt p-t-20">
+                        <div class="block2-txt">
                                 <a [routerLink]="['/single-product']" class="block2-name dis-block s-text3 p-b-5"
                                 [queryParams]="{ ProID:  latest.ProductID, CatName: latest.Cat_Name,
                                      SubCatName:latest.Sub_Sub_Cat_Name, id:latest.id, W:latest.inwhishlist }">
@@ -257,7 +257,7 @@
                             </span>
                         </div>
                     </div>
-                </div>
+                </ngx-slick>
 
                 
             </div>
@@ -375,11 +375,11 @@
 
         <!-- Slide2 -->
         <div class="wrap-slick2">
-            <div class="slick2">
+            <div class="">
 
-                <div *ngFor="let latests of GetAll_products" class="item-slick2 p-l-15 p-r-15">
+                <ngx-slick class="carousel item-slick2 p-l-15 p-r-15" #slickModal="slick-modal" [config]="slideConfig" >
                     <!-- Block2 -->
-                    <div class="block2">
+                    <div  class="slide" ngxSlickItem *ngFor="let latests of GetAll_products">
                         <div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew">
                             <img src="{{latests.Pic}}" onerror="this.src='../../assets/images/icons/logo 11.png'"  >
 
@@ -412,7 +412,7 @@
                             </span>
                         </div>
                     </div>
-                </div>
+                </ngx-slick>
 
                 
             </div>
@@ -426,7 +426,7 @@
     </div>
 </section>
 
-<section class="blog bgwhite p-t-94 p-b-65">
+<section class="blog bgwhite">
     <div class="container">
         <div class="sec-title p-b-52">
             <h3 class="m-text5 t-center">
@@ -434,10 +434,10 @@
             </h3>
         </div>
 
-        <div class="row">
+        <div class="show-data">
                 <!-- <div *ngFor="let data of GetALLLikeforyou.product"  class="col-lg-2 p-l-15 p-r-15" > -->
                         <!--  -->
-                        <div class="col-lg-2 block2" *ngFor="let data of GetALLLikeforyou" >
+                        <div class="block2" *ngFor="let data of GetALLLikeforyou" >
                             <div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelsale">
                                 <img src="{{data.Pic}}" alt="IMG-PRODUCT">
     

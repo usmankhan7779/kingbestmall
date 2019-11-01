@@ -2,6 +2,22 @@
 *{
     font-family: "Market Sans", Arial, sans-serif;
 }
+.wrap-slick2{
+    .slick-main-btn-left{
+        position: absolute;
+        z-index: 1;
+        top: 34%;
+        left: -50px;
+        font-size: 30px;
+    }
+    .slick-main-btn-right{
+        position: absolute;
+        z-index: 1;
+        top: 34%;
+        right: -50px;
+        font-size: 30px;
+    }
+}
 .slide1{
     position: relative;
     margin-top: 141px;

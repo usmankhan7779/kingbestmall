@@ -14,6 +14,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpModule } from '@angular/http';
 import { HttpInterceptors } from './services/_intercepters/http.interceptors';
+import { SlickModule } from 'ngx-slick';
  
 
 @NgModule({
@@ -37,6 +38,7 @@ import { HttpInterceptors } from './services/_intercepters/http.interceptors';
   FormsModule,
   HttpClientModule,
   HttpModule,
+  SlickModule.forRoot()
   ],
   providers: [
     {
