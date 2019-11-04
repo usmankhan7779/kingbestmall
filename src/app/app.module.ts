@@ -37,6 +37,7 @@ import {
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+ 
 import { NormalLayoutComponent } from './layouts/normal-layout/normal-layout.component';
 import { HomeComponent } from './component/home/home.component';
 import { FooterComponent } from './component/footer/footer.component';
@@ -103,7 +104,6 @@ export class MaterialModule { }
     BrowserModule,
     AppRoutingModule,
     BrowserModule,
-    BrowserAnimationsModule,
     ReactiveFormsModule,
     AppRoutingModule,
     BrowserTransferStateModule,
