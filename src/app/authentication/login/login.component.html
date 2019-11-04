@@ -1,1 +1,38 @@
-<p>login works!</p>
+<div class="container">
+    <div  class="row">
+        <div  class="form-1 form-width">
+            <div  class="form-1-header">
+                <h1 >Sign In to Your Account</h1>
+                <ul  class="form-1-sl">
+                    <li ><a ><img 
+                                src="../../../assets/images/icons/icon-facebook.png"></a></li>
+                    <li ><a ><img 
+                                src="../../../assets/images/icons/icon-Google.png"></a></li>
+                </ul>
+            </div>
+            <div  class="form-1-body text-center">
+                <form  class="input-forms">
+
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Username">
+                    </mat-form-field>
+
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Password">
+                    </mat-form-field>
+
+                    <div class="s-toggle text-left float-left">
+                            <mat-slide-toggle>Stay Signed in </mat-slide-toggle><br>
+                        <a  class="form-1-forgot"
+                            data-target="#myModal3" data-toggle="modal" value="Delete">Forgot Password?</a>
+                    </div>
+                   <button  class="login-btn">Sign In</button>
+                </form>
+                <div  class="have-account">No Account Yet? <a  routerlink="/signup"
+                        href="/signup"> Sign Up</a></div>
+                <div  class="terms-cond"><a  href="/terms" target="blank">Terms of Use
+                    </a>&nbsp;<a  href="/privacy" target="blank"> Privacy Policy</a></div>
+            </div>
+        </div>
+    </div>
+</div>

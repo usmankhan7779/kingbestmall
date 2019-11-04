@@ -2,6 +2,46 @@
 *{
     font-family: "Market Sans", Arial, sans-serif;
 }
+// Start input Form
+.input-forms{
+  
+    
+    .mat-input-infix {
+        padding: .4375em 0!important;
+    }
+    .mat-input-element {
+        padding: 5px 0;
+        font-size: 24px!important;
+        font-weight: 600 !important;
+    }
+    .mat-form-field-label {
+        top: 34px;
+        font-size: 16px!important;
+        font-weight: 600!important;
+        margin: 0;
+    }
+    .mat-form-field-appearance-legacy.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
+        -webkit-transform: translateY(-26px) scale(.75) perspective(100px) translateZ(0)!important;
+        transform: translateY(-26px) scale(.75) perspective(100px) translateZ(0)!important;
+        -ms-transform: translateY(-26px) scale(.75)!important;
+    }
+}
+.input-forms .mat-form-field-appearance-legacy .mat-form-field-wrapper {
+    padding-bottom: 12px;
+}
+.input-forms{
+    .mat-slide-toggle-content{
+        font-size: 15px;
+        font-weight: 500;
+    }
+    .mat-slide-toggle.mat-checked .mat-slide-toggle-bar {
+        background-color: rgb(80, 80, 80);
+    }
+    .mat-slide-toggle.mat-checked .mat-slide-toggle-thumb {
+        background-color: #000;
+    }
+}
+// End input Form
 .wrap-slick2{
     .slick-main-btn-left{
         position: absolute;
