@@ -88,7 +88,7 @@ import { UserSignupComponent } from './component/user-signup/user-signup.compone
     FormsModule,
     MatFormFieldModule
   ],
-  declarations: [UserSignupComponent],
+  declarations: [ ],
 })
 export class MaterialModule { }
 
