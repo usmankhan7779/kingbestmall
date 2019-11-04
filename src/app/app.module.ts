@@ -1,6 +1,39 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, BrowserTransferStateModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import {
+  MatAutocompleteModule,
+  MatButtonModule,
+  MatButtonToggleModule,
+  MatCardModule,
+  MatCheckboxModule,
+  MatChipsModule,
+  MatDatepickerModule,
+  MatDialogModule,
+  MatExpansionModule,
+  MatGridListModule,
+  MatIconModule,
+  MatInputModule,
+  MatListModule,
+  MatMenuModule,
+  MatNativeDateModule,
+  MatPaginatorModule,
+  MatProgressBarModule,
+  MatProgressSpinnerModule,
+  MatRadioModule,
+  MatRippleModule,
+  MatSelectModule,
+  MatSidenavModule,
+  MatSliderModule,
+  MatSlideToggleModule,
+  MatSnackBarModule,
+  MatSortModule,
+  MatTableModule,
+  MatTabsModule,
+  MatToolbarModule,
+  MatTooltipModule,
+  MatStepperModule,
+  MatFormFieldModule,
+} from '@angular/material';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -15,7 +48,46 @@ import { CommonModule } from '@angular/common';
 import { HttpModule } from '@angular/http';
 import { HttpInterceptors } from './services/_intercepters/http.interceptors';
 import { SlickModule } from 'ngx-slick';
- 
+
+@NgModule({
+  exports: [
+    MatAutocompleteModule,
+    MatButtonModule,
+    MatButtonToggleModule,
+    MatCardModule,
+    MatCheckboxModule,
+    MatChipsModule,
+    MatStepperModule,
+    MatDatepickerModule,
+    MatDialogModule,
+    MatExpansionModule,
+    MatGridListModule,
+    MatIconModule,
+    MatInputModule,
+    MatListModule,
+    MatMenuModule,
+    MatNativeDateModule,
+    MatPaginatorModule,
+    MatProgressBarModule,
+    MatProgressSpinnerModule,
+    MatRadioModule,
+    MatRippleModule,
+    MatSelectModule,
+    MatSidenavModule,
+    MatSliderModule,
+    MatSlideToggleModule,
+    MatSnackBarModule,
+    MatSortModule,
+    MatTableModule,
+    MatTabsModule,
+    MatToolbarModule,
+    MatTooltipModule,
+    FormsModule,
+    MatFormFieldModule
+  ],
+  declarations: [],
+})
+export class MaterialModule { }
 
 @NgModule({
   declarations: [
@@ -24,8 +96,8 @@ import { SlickModule } from 'ngx-slick';
     FooterComponent,
     HomeComponent,
     NormalLayoutComponent,
-  
- 
+
+
   ],
   imports: [
     BrowserModule,
@@ -33,12 +105,14 @@ import { SlickModule } from 'ngx-slick';
     BrowserModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
-  AppRoutingModule,
-  CommonModule,
-  FormsModule,
-  HttpClientModule,
-  HttpModule,
-  SlickModule.forRoot()
+    AppRoutingModule,
+    BrowserTransferStateModule,
+    BrowserAnimationsModule,
+    CommonModule,
+    FormsModule,
+    HttpClientModule,
+    HttpModule,
+    SlickModule.forRoot()
   ],
   providers: [
     {
@@ -46,7 +120,7 @@ import { SlickModule } from 'ngx-slick';
       useClass: HttpInterceptors,
       multi: true
     }
-    ,HomeService],
+    , HomeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

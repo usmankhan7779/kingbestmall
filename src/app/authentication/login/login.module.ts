@@ -6,6 +6,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginRoutes } from './login.routing';
 import { LoginComponent } from './login.component';
+import { MaterialModule } from 'src/app/app.module';
  
  
 @NgModule({
@@ -15,8 +16,26 @@ import { LoginComponent } from './login.component';
         FormsModule,
         ReactiveFormsModule,
         HttpClientModule,
-        HttpModule
+        HttpModule,
+        MaterialModule,
         ],
+
+
+
+
+
+
+        // imports: [
+        //     CommonModule,
+        //     FormsModule,
+        //     HeaderModule,
+        //     ReactiveFormsModule,
+        //     RecapchaModule,
+        //     MaterialModule,
+        //     RecaptchaModule.forRoot(),     
+        //     // HeaderModule,
+        //     RouterModule.forChild(loginRoutes)
+        //   ],
     declarations: [LoginComponent],
     providers: []
 })
