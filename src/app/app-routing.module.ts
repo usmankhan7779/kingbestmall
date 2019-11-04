@@ -17,6 +17,11 @@ const routes: Routes = [
       { path: 'login', loadChildren: './authentication/login/login.module#LoginModule' },
       { path: 'signup', loadChildren: './component/user-signup/signup.module#UsersignupModule'},
       { path: 'terms', loadChildren: './component/staticpage/terms-use/terms-use.module#TermsUseModule'},
+      { path: 'privacy-policy', loadChildren: './component/staticpage/privacy-policy/privacy-policy.module#PrivacyPolicyModule'},
+
+
+
+      
 
 
       
