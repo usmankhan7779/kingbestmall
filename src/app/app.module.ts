@@ -49,6 +49,8 @@ import { CommonModule } from '@angular/common';
 import { HttpModule } from '@angular/http';
 import { HttpInterceptors } from './services/_intercepters/http.interceptors';
 import { SlickModule } from 'ngx-slick';
+import { HttpService } from './services/http.service';
+import { UserSignupComponent } from './component/user-signup/user-signup.component';
 
 @NgModule({
   exports: [
@@ -86,7 +88,7 @@ import { SlickModule } from 'ngx-slick';
     FormsModule,
     MatFormFieldModule
   ],
-  declarations: [],
+  declarations: [UserSignupComponent],
 })
 export class MaterialModule { }
 
@@ -112,7 +114,7 @@ export class MaterialModule { }
     FormsModule,
     HttpClientModule,
     HttpModule,
-    SlickModule.forRoot()
+    SlickModule.forRoot(), 
   ],
   providers: [
     {
@@ -120,7 +122,7 @@ export class MaterialModule { }
       useClass: HttpInterceptors,
       multi: true
     }
-    , HomeService],
+    , HomeService,HttpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -51,15 +51,6 @@ export class HomeService {
     }
 
     
-  //   Getlikeforyou() {
   
-  //     // let headers = new Headers();
-  //     // headers.append('Content-Type', 'application/json');
-   
-  //     // // console.log('pofile', localStorage.getItem('Authorization'));
-  //     return this.http.get(this.baseUrl + 'getFunProductsHome/', { headers: headers }).map(response => response.json());
-     
-  //     // https://apis.officedoor.ai/office/property_detail_by_id/465/
-  // }
   
 }

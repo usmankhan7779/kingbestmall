@@ -15,7 +15,8 @@ const routes: Routes = [
       { path: 'aboutus', loadChildren: './component/about-us/aboutus.module#AboutusModule' },
       { path: 'single-product', loadChildren: './component/single-product/single-product.module#SingleProductModule' },
       { path: 'login', loadChildren: './authentication/login/login.module#LoginModule' },
-
+      { path: 'signup', loadChildren: './component/user-signup/signup.module#UsersignupModule'},
+      
     ]
   },
 

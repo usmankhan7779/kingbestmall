@@ -4,17 +4,18 @@ import { Http, HttpModule } from '@angular/http';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { LoginRoutes } from './login.routing';
-import { LoginComponent } from './login.component';
+ 
 import { MaterialModule } from 'src/app/app.module';
 import { RecapchaModule } from 'src/app/recapcha/recapcha.module';
+import { UserSignupComponent } from './user-signup.component';
+import { SignupRoutes } from './signup.routing';
  
  
  
 @NgModule({
     imports: [
         CommonModule,
-        RouterModule.forChild(LoginRoutes),
+        RouterModule.forChild(SignupRoutes),
         FormsModule,
         ReactiveFormsModule,
         HttpClientModule,
@@ -29,8 +30,8 @@ import { RecapchaModule } from 'src/app/recapcha/recapcha.module';
 
 
          
-    declarations: [LoginComponent],
+    declarations: [UserSignupComponent],
     providers: []
 })
 
-export class LoginModule { }
+export class UsersignupModule { }

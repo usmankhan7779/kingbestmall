@@ -5,6 +5,7 @@
 export const environment = {
   production: false,
   apiUrl: 'https://apis.dhaar.pk/products/',
+  userurl:'https://apis.dhaar.pk/user/'
 };
 
 /*

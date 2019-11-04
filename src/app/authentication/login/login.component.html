@@ -11,22 +11,28 @@
                 </ul>
             </div>
             <div  class="form-1-body text-center">
-                <form  class="input-forms">
+                <form  role="form" #f="ngForm" novalidate class="input-forms">
 
                     <mat-form-field class="example-full-width">
-                        <input matInput placeholder="Username">
+                        <input matInput  [(ngModel)]="model.username"   name="username" placeholder="Username">
                     </mat-form-field>
 
                     <mat-form-field class="example-full-width">
-                        <input matInput placeholder="Password">
+                        <input matInput  [(ngModel)]="model.password"  [type]="hide ? 'password' : 'text'" name="password"  placeholder="Password">
+                        <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
                     </mat-form-field>
-
+                    <div class="formrow pull-right">
+                        <div class="form-group">
+                          <app-recapcha></app-recapcha>
+      
+                        </div>
+                      </div>
                     <div class="s-toggle text-left float-left">
                             <mat-slide-toggle>Stay Signed in </mat-slide-toggle><br>
                         <a  class="form-1-forgot"
                             data-target="#myModal3" data-toggle="modal" value="Delete">Forgot Password?</a>
                     </div>
-                   <button  class="login-btn">Sign In</button>
+                   <button (click)="onLogin()"   class="login-btn">Sign In</button>
                 </form>
                 <div  class="have-account">No Account Yet? <a  routerlink="/signup"
                         href="/signup"> Sign Up</a></div>
