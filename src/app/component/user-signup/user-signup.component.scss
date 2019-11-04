@@ -1,0 +1,89 @@
+.form-1 {
+    box-shadow: 0 0 10px #ccc;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 220px auto 20px;
+    float: none;
+    max-width: 420px;
+    width: 420px;
+}
+.form-1-header {
+    width: 100%;
+    background: #000;
+    position: relative;
+    color: #fff;
+    font-weight: 700;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-top: -45px;
+    border-radius: 5px;
+    box-shadow: 0 4px 20px 0 rgba(0,0,0,.14), 0 7px 10px -5px rgba(0,0,0,.4);
+    text-align: center;
+}
+.form-1-header h1 {
+    font-size: 27px;
+    font-weight: 600;
+    color: #fff;
+    margin: 0;
+}
+.form-1-sl{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+.form-1-sl> li{
+    list-style: none;
+    margin: 5px 25px;
+    display: inline-block;
+}
+.login-btn{
+    background: #000;
+    text-align: center;
+    color: #fff!important;
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-size: 24px;
+    font-weight: 700;
+    transition: .2s;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 14px 26px -12px rgba(0,0,0,.42),0 4px 23px 0 rgba(0,0,0,.12),0 8px 10px -5px rgba(0,0,0,.2)!important;
+    display: block;
+    width: 100%;
+    &:hover{
+        background: #c00;
+    }
+}
+.have-account{
+    font-weight: 600;
+    margin-top: 10px;
+    text-align: center;
+    float: left;
+    width: 100%;
+    a{
+        color: #0275d8;
+        font-weight: 600;
+    }
+}
+.terms-cond a{
+    color: #0275d8;
+    font-weight: 400;
+    font-size: 13px;
+}
+.form-1-forgot{
+    color: #007dff!important;
+    font-weight: 600;
+    transition: none;
+    font-size: 15px;
+    text-align: center;
+}
+.mat-form-field{
+    width: 100%;
+}
+.s-toggle{
+    margin: 24px 0 30px;
+}
+.formrow .pull-right{
+    margin-bottom: 10px;
+}

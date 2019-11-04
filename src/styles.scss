@@ -41,6 +41,18 @@
         background-color: #000;
     }
 }
+.signup-from{
+    .mat-slide-toggle-content{
+        font-size: 13px;
+        font-weight: 400;
+        white-space: normal;
+        line-height: 16px;
+        a{
+            font-size: 13px;
+            color: #007dff !important;
+        }
+    }
+}
 // End input Form
 .wrap-slick2{
     .slick-main-btn-left{
