@@ -16,6 +16,10 @@ const routes: Routes = [
       { path: 'single-product', loadChildren: './component/single-product/single-product.module#SingleProductModule' },
       { path: 'login', loadChildren: './authentication/login/login.module#LoginModule' },
       { path: 'signup', loadChildren: './component/user-signup/signup.module#UsersignupModule'},
+      { path: 'terms', loadChildren: './component/staticpage/terms-use/terms-use.module#TermsUseModule'},
+
+
+      
       
     ]
   },
