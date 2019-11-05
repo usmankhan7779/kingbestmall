@@ -10,15 +10,17 @@ import { environment } from '../../environments/environment';
 })
 export class HttpService {
   baseUrl = environment.apiUrl;
-  userUrl = environment.userurl
+  userUrl = environment.userurl;
+  loginUrl= environment.loginUrl;
+   
 
 
   constructor(private http: HttpClient) {
 
   }
-    // Sample post
+    // User Login APi
     login(auth): Observable<any> {
-      const s = this.http.post(this.userUrl + 'user_login/', auth)
+      const s = this.http.post(this.loginUrl + '/api-token-auth/', auth)
         .pipe(
           tap(_ => {
           }, error => {
@@ -27,4 +29,19 @@ export class HttpService {
         );
       return s;
     }
+
+
+// User Login APi
+  register(auth): Observable<any> {
+  const s = this.http.post(this.userUrl + 'SignUp/', auth)
+    .pipe(
+      tap(_ => {
+      }, error => {
+        console.log(error)
+      })
+    );
+  return s;
+}
+
+    // /User/SignUp/
 }
