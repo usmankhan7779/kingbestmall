@@ -49,7 +49,7 @@ export class VerfiyEmailComponent implements OnInit {
           confirmButtonText: 'OK'
         }).then((result) => {
           if (result.value) {
-            this._nav.navigate(['/signin'])
+            this._nav.navigate(['/login'])
           }
         })
       });

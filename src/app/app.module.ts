@@ -37,7 +37,7 @@ import {
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
- 
+
 import { NormalLayoutComponent } from './layouts/normal-layout/normal-layout.component';
 import { HomeComponent } from './component/home/home.component';
 import { FooterComponent } from './component/footer/footer.component';
@@ -51,6 +51,7 @@ import { HttpInterceptors } from './services/_intercepters/http.interceptors';
 import { SlickModule } from 'ngx-slick';
 import { HttpService } from './services/http.service';
 import { UserSignupComponent } from './component/user-signup/user-signup.component';
+import { AuthGuard } from './services/AuthGuard/auth.guard';
 
 @NgModule({
   exports: [
@@ -88,7 +89,7 @@ import { UserSignupComponent } from './component/user-signup/user-signup.compone
     FormsModule,
     MatFormFieldModule
   ],
-  declarations: [ ],
+  declarations: [],
 })
 export class MaterialModule { }
 
@@ -114,7 +115,7 @@ export class MaterialModule { }
     FormsModule,
     HttpClientModule,
     HttpModule,
-    SlickModule.forRoot(), 
+    SlickModule.forRoot(),
   ],
   providers: [
     {
@@ -122,7 +123,9 @@ export class MaterialModule { }
       useClass: HttpInterceptors,
       multi: true
     }
-    , HomeService,HttpService],
+    , HomeService,
+     HttpService,
+      AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

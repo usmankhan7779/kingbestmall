@@ -14,7 +14,7 @@ const routes: Routes = [
       { path: 'contactus', loadChildren: './component/contact-us/contactus.module#ContactusModule' },
       { path: 'aboutus', loadChildren: './component/about-us/aboutus.module#AboutusModule' },
       { path: 'single-product', loadChildren: './component/single-product/single-product.module#SingleProductModule' },
-      { path: 'signin', loadChildren: './authentication/login/login.module#LoginModule' },
+      { path: 'login', loadChildren: './authentication/login/login.module#LoginModule' },
 
       { path: 'VerfiyEmail/:key', loadChildren: './authentication/verify-email/verify-email.module#VerfiyEmailModule' },
 
