@@ -21,7 +21,8 @@ import { SignupRoutes } from './signup.routing';
         HttpClientModule,
         HttpModule,
         MaterialModule,
-        RecapchaModule
+        RecapchaModule,
+        
         ],
 
 
