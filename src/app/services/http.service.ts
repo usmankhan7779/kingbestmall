@@ -11,7 +11,7 @@ import { environment } from '../../environments/environment';
 export class HttpService {
   baseUrl = environment.apiUrl;
   userUrl = environment.userurl;
-  loginUrl= environment.loginUrl;
+  loginUrl= environment.usman;
    
 
 
