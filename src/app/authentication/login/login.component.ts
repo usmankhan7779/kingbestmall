@@ -11,7 +11,7 @@ import Swal from 'sweetalert2';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  @ViewChild(RecapchaComponent,{ static: true }) captcha: RecapchaComponent;
+  @ViewChild(RecapchaComponent,{ static: false }) captcha: RecapchaComponent;
   model: any = {};
   hide = true;
   constructor(private http: HttpService, private _nav: Router, public recapcha: RecapchaService ) { }

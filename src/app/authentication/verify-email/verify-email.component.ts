@@ -38,18 +38,18 @@ export class VerfiyEmailComponent implements OnInit {
         this._nav.navigate(['/login']);
       }
 
-      // this.obj.UserConfirm(this.key).subscribe( data => {
-      //   Swal.fire({
-      //     title: 'Welcome Back. Thanks for verifying your account.',
-      //     type: 'success',
-      //     confirmButtonColor: '#3085d6',
-      //     confirmButtonText: 'OK'
-      //   }).then((result) => {
-      //     if (result.value) {
-      //       this._nav.navigate(['/login'])
-      //     }
-      //   })
-      // });
+      this.http.UserConfirm(this.key).subscribe( data => {
+        Swal.fire({
+          title: 'Welcome Back. Thanks for verifying your account.',
+          type: 'success',
+          confirmButtonColor: '#3085d6',
+          confirmButtonText: 'OK'
+        }).then((result) => {
+          if (result.value) {
+            this._nav.navigate(['/sigin'])
+          }
+        })
+      });
 
       console.log('KEY is:', this.key);
     }

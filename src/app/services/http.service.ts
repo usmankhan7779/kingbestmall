@@ -43,5 +43,16 @@ export class HttpService {
   return s;
 }
 
+// User verfiy  APi
+UserConfirm(auth): Observable<any> {
+  const s = this.http.post(this.userUrl + 'EmailConfirm/', auth)
+    .pipe(
+      tap(_ => {
+      }, error => {
+        console.log(error)
+      })
+    );
+  return s;
+}
     // /User/SignUp/
 }
