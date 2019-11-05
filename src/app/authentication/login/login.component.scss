@@ -1,22 +1,27 @@
+.container {
+    width: 70%;
+    margin: 0 auto;
+    background: url(../../../assets/images/icons/sign-in.png) 0 0/100% 100% no-repeat;
+}
 .form-1 {
     box-shadow: 0 0 10px #ccc;
     background: #fff;
     padding: 20px;
     border-radius: 5px;
-    margin: 220px auto 20px;
+    margin: 170px auto 20px;
     float: none;
     max-width: 420px;
     width: 420px;
 }
 .form-1-header {
     width: 100%;
-    background: #000;
+    background: linear-gradient(90deg,#a91f73 0,#ff4270 100%);
     position: relative;
     color: #fff;
     font-weight: 700;
     padding: 10px;
     box-sizing: border-box;
-    margin-top: -60px;
+    margin-top: -45px;
     border-radius: 5px;
     box-shadow: 0 4px 20px 0 rgba(0,0,0,.14), 0 7px 10px -5px rgba(0,0,0,.4);
     text-align: center;
@@ -38,22 +43,25 @@
     display: inline-block;
 }
 .login-btn{
-    background: #000;
+    background: linear-gradient(90deg,#a91f73 0,#ff4270 100%);
     text-align: center;
     color: #fff!important;
     padding: 5px 15px;
     border-radius: 50px;
-    font-size: 24px;
-    font-weight: 700;
+    font-size: 20px;
+    font-weight: 500;
     transition: .2s;
     cursor: pointer;
     border: none;
     box-shadow: 0 14px 26px -12px rgba(0,0,0,.42),0 4px 23px 0 rgba(0,0,0,.12),0 8px 10px -5px rgba(0,0,0,.2)!important;
     display: block;
     width: 100%;
+    border: 1px solid #ff4270!important;
     &:hover{
-        background: #c00;
-    }
+        background: #fff;
+        border: 1px solid #ff4270!important;
+        color: #ff4270 !important;
+    } 
 }
 .have-account{
     font-weight: 600;

@@ -611,9 +611,7 @@ iframe {
 
 /*[ Menu ]
 ===========================================================*/
-.search-bar .dropdown {
-  padding: 0;
-}
+
 .search-bar li{
   padding: 12px 0;
 }
@@ -712,6 +710,7 @@ iframe {
   transition: all 0.3s;
   padding: 0 20px;
   /* height: 125px; */
+  box-shadow: 0 3px 4px #ccc;
 }
 
 .fixed-header .wrap_header {
@@ -755,23 +754,26 @@ iframe {
 
 .main_menu > li > a {
   font-family: Montserrat-Regular;
-  font-size: 16px;
-  color: #333333;
+  font-size: 15px;
+  color: #273c61 !important;
   padding: 0;
   border-bottom: 1px solid transparent;
+  font-weight: 600;
+  cursor: pointer;
 }
 
 li.sale-noti > a {
   color: #e65540;
+  
 }
 
 .main_menu > li:hover > a {
   text-decoration: none;
-  border-bottom: 1px solid #333333;
+  color: #a91f73 !important;
 }
 
 .main_menu li {
-  position: relative;
+  position: unset;
 }
 
 .main_menu > li:hover > .sub_menu {
@@ -826,6 +828,11 @@ li.sale-noti > a {
   color: #e65540;
   text-decoration: none;
 }
+
+/* hover menu */
+
+
+
 
 /* ------------------------------------ */
 .header-icons {
