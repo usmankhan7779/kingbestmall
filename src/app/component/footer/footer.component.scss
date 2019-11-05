@@ -59,13 +59,26 @@
     }  
 }
 .copy-r{
-    padding: 10px 0px;
+    padding: 10px 20px;
     background: #dcdbdb;
     margin-top: 10px;
-    .s-text8{
-        color: #616161;
-        a{
-            color: #616161; 
-        }
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    color: #4e4e4e;
+    .footer-input{
+        border-radius: 50px;
+        overflow: hidden;
+        background-color: #fff;
+        margin-left: auto;
+        width: 300px;
+    }
+    .footer-input.form-control{
+        height: 41px;
+        font-size: 18px;
+        border: none;
+    }
+    i{
+        color: #ff4270;
     }
 } 

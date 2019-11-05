@@ -1,0 +1,33 @@
+.search-bar{
+    margin-left: auto;
+}
+.fa-youtube-play{
+    color: #c00;
+}
+.fa-snapchat-ghost{
+    color: #FEFC00;
+}
+.fa-pinterest-p{
+    color: #c8232c;
+}
+.fa-instagram{
+    color: #CC3366;
+}
+.fa-facebook{
+    color: #3b5998;
+}
+.has-search .form-control {
+    padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+}

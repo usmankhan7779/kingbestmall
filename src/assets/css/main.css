@@ -630,17 +630,18 @@ iframe {
 .search-bar li form{
   display: flex;
 }
-.search-field{
+/* .search-field{
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 0 !important;
   overflow: hidden;
-}
+} */
+
 .search-field input{
   max-width: 500px;
   width: 500px;
   padding: 5px 10px;
-  border-right: 1px solid #ccc !important;
+  /* border-right: 1px solid #ccc !important; */
 }
 .search-field select , .search-field select:focus{
   border: none;
@@ -649,13 +650,26 @@ iframe {
   font-size: 12px;
   outline: none;
 }
-.search-bar button{
+/* .search-bar button{
   padding: 0 20px;
   margin-left: 10px;
   background: #000;
   border-radius: 50px;
   color: #fff;
   transition: all ease-in-out .5s;
+} */
+.search-field{
+  border: 1px solid #ccc;
+  width: 400px;
+  max-width: 400px;
+  border-radius: 50px;
+  overflow: hidden;
+}
+.search-field .btn-secondary{
+  padding: .5rem .75rem;
+  border: none;
+  border-radius: 100px;
+  background: #000;
 }
 .search-bar button:hover{
   background: #eb2029;
