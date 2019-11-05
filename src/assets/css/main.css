@@ -507,7 +507,8 @@ iframe {
 ///////////////////////////////////////////////////////////
 */
 .header1 {
-  height: 117px;
+  width: 100%;
+  /* height: 117px; */
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   -moz-transition: all 0.3s;
@@ -709,8 +710,8 @@ iframe {
   -o-transition: all 0.3s;
   -moz-transition: all 0.3s;
   transition: all 0.3s;
-  padding: 0 40px;
-  height: 125px;
+  padding: 0 20px;
+  /* height: 125px; */
 }
 
 .fixed-header .wrap_header {
@@ -748,13 +749,13 @@ iframe {
   position: relative;
   padding-top: 20px;  
   padding-bottom: 20px; 
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .main_menu > li > a {
   font-family: Montserrat-Regular;
-  font-size: 15px;
+  font-size: 16px;
   color: #333333;
   padding: 0;
   border-bottom: 1px solid transparent;
