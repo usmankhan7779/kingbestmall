@@ -86,16 +86,16 @@
     margin: 20px;
     a{
         padding: 5px 20px;
-        background: #eb2029;
+        background: #000;
         color: #fff;
-        border-radius: 5px;
+        border-radius: 50px;
         font-size: 18px;
-        box-shadow: 0 0 12px #ccc;
-        border: 1px solid #eb2029;
+        box-shadow: 0 4px 8px #b3b3b3;
+        border: 1px solid #000;
         &:hover{
             border: 1px solid #eb2029;
-            background: #fff;
-            color: #eb2029;
+            background: #eb2029;
+            color: #fff;
         }
     }
 }

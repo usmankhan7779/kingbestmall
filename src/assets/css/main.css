@@ -652,9 +652,13 @@ iframe {
 .search-bar button{
   padding: 0 20px;
   margin-left: 10px;
-  background: #eb2029;
-  border-radius: 5px;
+  background: #000;
+  border-radius: 50px;
   color: #fff;
+  transition: all ease-in-out .5s;
+}
+.search-bar button:hover{
+  background: #eb2029;
 }
 .advance{
   line-height: 0;
