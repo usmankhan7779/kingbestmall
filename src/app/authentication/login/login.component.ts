@@ -25,6 +25,9 @@ export class LoginComponent implements OnInit {
       password: this.model.password
     };
     if (this.recapcha.check()) {
+      this.http.IsActive(auth).subscribe(res =>{
+        if(res.Message == 'Account is Active' ){
+        
     this.http.login(auth).subscribe(
       data => {
         localStorage.setItem('token', data.token);
@@ -35,17 +38,34 @@ export class LoginComponent implements OnInit {
           'success'
         );
         // this.toastr.success(data['response']);
+        if( res.Role == 'U'){
+           this._nav.navigate(['/aboutus'])
+        }
+        else if (res.Role == 'V')
         this._nav.navigate(['/'])
-
-
-      },
-      error => {
-
-
-         
-
-
-      }
+      })
+    }
+    else if (res.Message == 'Account is Inactive' ) {
+      Swal.fire({
+        type: 'error',
+        title: 'Your Account is Inactive ',
+        text: 'Please Check Your Email for Activation link ',
+        showConfirmButton: false,
+        width: '512px',
+        timer: 2000
+      });
+    }
+    else if (res.Message == 'Username or Password are wrong' ){
+      Swal.fire({
+        type: 'error',
+        title: 'Oops',
+        text: res.Message,
+        showConfirmButton: false,
+        width: '512px',
+        timer: 2000
+      });
+    }
+    },
     );
 
   }

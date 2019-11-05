@@ -37,8 +37,11 @@ export class VerfiyEmailComponent implements OnInit {
       if ( this.key === '0')  {
         this._nav.navigate(['/login']);
       }
-
-      this.http.UserConfirm(this.key).subscribe( data => {
+      let auth = {
+        activation_key: this.key,
+       
+      };
+      this.http.UserConfirm(auth).subscribe( data => {
         Swal.fire({
           title: 'Welcome Back. Thanks for verifying your account.',
           type: 'success',
@@ -46,7 +49,7 @@ export class VerfiyEmailComponent implements OnInit {
           confirmButtonText: 'OK'
         }).then((result) => {
           if (result.value) {
-            this._nav.navigate(['/sigin'])
+            this._nav.navigate(['/signin'])
           }
         })
       });
@@ -56,27 +59,7 @@ export class VerfiyEmailComponent implements OnInit {
 
   }
 
-  // resedcode( ) {
-  //   if (isPlatformBrowser(this.platformId)) {
-  //     this.Waitcall = true;
-  //     this.obj.sendmail(localStorage.getItem('email'))
-  //       .subscribe(
-  //         data => {
-  //           // this.alertService.success('Registration successful', true);
-  //           this.is_send = true;
-  //           this.is_match_error = false;
-  //           this.Waitcall = false;
-  //           // alert('success')
-  //         },
-  //         error => {
-  //           this.is_send = false;
-  //           this.is_match_error = true;
-  //           this.Waitcall = false;
-
-  //         });
-  //   }
-  // }
-
+   
   
 
 }
