@@ -79,17 +79,18 @@ export class HomeComponent implements OnInit {
       prevArrow: '<i class="fa fa-chevron-right" ></i>',
     });
  
-    $(".read-more").click(function(){
-      $(".vendors-box").addClass("vendors-box-show");
-    });
-
-    $(".read-more").click(function(){
-      $(".read-more").addClass("btn-hide");
-    });
   }
 
-
-
+  readMore(){
+    $(".vendors-box").addClass("vendors-box-show");
+    $('.read-less').show();
+    $('.read-more').hide();
+  };
+  readLess() {
+    $(".vendors-box").removeClass("vendors-box-show");
+    $('.read-more').show();
+    $('.read-less').hide();
+  }
   Getlikeforyou() {
 
     this.http.Getlikeforyou().subscribe(

@@ -108,9 +108,12 @@
 }
 .blog{
     h4{
-        min-height: 63px;
+        // min-height: 63px;
         display: flex;
         align-items: center;
+        a{
+            font-weight: bold;
+        }
     }
 }
 .show-data{
