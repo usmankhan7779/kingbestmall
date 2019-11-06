@@ -11,7 +11,7 @@ import { environment } from '../../environments/environment';
 export class HttpService {
   baseUrl = environment.apiUrl;
   userUrl = environment.userurl;
-  loginUrl= environment.loginUrl;
+  loginUrl= environment.usman;
    
 
 
@@ -30,7 +30,18 @@ export class HttpService {
       return s;
     }
 
-
+     // User Login APi
+     IsActive(auth): Observable<any> {
+      const s = this.http.post(this.userUrl + 'IsActive/', auth)
+        .pipe(
+          tap(_ => {
+          }, error => {
+            console.log(error)
+          })
+        );
+      return s;
+    }
+    
 // User Login APi
   register(auth): Observable<any> {
   const s = this.http.post(this.userUrl + 'SignUp/', auth)
@@ -45,7 +56,7 @@ export class HttpService {
 
 // User verfiy  APi
 UserConfirm(auth): Observable<any> {
-  const s = this.http.post(this.userUrl + 'EmailConfirm/', auth)
+  const s = this.http.post(this.userUrl +'EmailConfirm/', auth)
     .pipe(
       tap(_ => {
       }, error => {

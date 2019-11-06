@@ -16,7 +16,7 @@
                         contact@kingbestmall.com
                 </span> -->
                 <div class="">
-                        <a routerLink="/" class="topbar-social-item fa fa-sign-in"></a>
+                        <a (click)="logout()" class="topbar-social-item fa fa-sign-in"></a>
                         <a routerLink="/" class="topbar-social-item fa fa-heart"></a>
                         <!-- <a routerLink="/login" class="topbar-social-item">MY kingbestmall</a> -->
                         <!-- <a routerLink="/" class="topbar-social-item fa fa-snapchat-ghost"></a>
@@ -128,7 +128,7 @@
                         </li>
                         
                         <li>
-                            <a  [routerLink]="['/signin']" class="topbar-social-item">MY kingbestmall</a>
+                            <a  [routerLink]="['login']" class="topbar-social-item">MY kingbestmall</a>
                         </li>
                     </ul>
                 </nav>

@@ -66,7 +66,7 @@ export class UserSignupComponent implements OnInit {
             showConfirmButton: true,
             width: '512px',
           });
-          this.router.navigate(['/signin']);
+          this.router.navigate(['login']);
         },
         error => {
         });
