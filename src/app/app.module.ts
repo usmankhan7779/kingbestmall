@@ -52,6 +52,7 @@ import { SlickModule } from 'ngx-slick';
 import { HttpService } from './services/http.service';
 import { UserSignupComponent } from './component/user-signup/user-signup.component';
 import { AuthGuard } from './services/AuthGuard/auth.guard';
+import { GalleryComponent } from './component/staticpage/gallery/gallery.component';
 
 @NgModule({
   exports: [
@@ -89,7 +90,7 @@ import { AuthGuard } from './services/AuthGuard/auth.guard';
     FormsModule,
     MatFormFieldModule
   ],
-  declarations: [],
+  declarations: [ ],
 })
 export class MaterialModule { }
 
