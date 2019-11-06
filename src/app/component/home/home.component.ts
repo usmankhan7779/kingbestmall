@@ -59,6 +59,9 @@ export class HomeComponent implements OnInit {
     ]
   };
 
+  
+
+
   ngOnInit() {
 
  
@@ -78,8 +81,13 @@ export class HomeComponent implements OnInit {
       prevArrow: '<i class="fa fa-chevron-right" ></i>',
     });
  
+    $(".read-more").click(function(){
+      $(".vendors-box").addClass("vendors-box-show");
+    });
 
-
+    $(".read-more").click(function(){
+      $(".read-more").addClass("btn-hide");
+    });
   }
 
 
