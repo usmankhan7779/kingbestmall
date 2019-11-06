@@ -13,6 +13,8 @@ export class HomeComponent implements OnInit {
   GetAll_products: any = [];
   imageurls = 'https://storage.dhaar.pk/final/';
   GetALLFeaturedProductss: any = [];
+ 
+
   constructor(private http: HomeService) { }
 
   slideConfig = {
@@ -62,7 +64,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
 
-
+ 
     this.get_metrics_dasboard();
     this.Getlikeforyou();
     this.GetAllproducts();

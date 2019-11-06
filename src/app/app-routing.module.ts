@@ -15,7 +15,7 @@ const routes: Routes = [
       { path: 'aboutus', loadChildren: './component/about-us/aboutus.module#AboutusModule' },
       { path: 'single-product', loadChildren: './component/single-product/single-product.module#SingleProductModule' },
       { path: 'login', loadChildren: './authentication/login/login.module#LoginModule' },
-
+      { path: 'gallery', loadChildren: './component/staticpage/gallery/gallery.module#galleryModule' },
       { path: 'VerfiyEmail/:key', loadChildren: './authentication/verify-email/verify-email.module#VerfiyEmailModule' },
 
 
