@@ -6,6 +6,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { singleproductsRoutes } from './single-product.routing';
 import { SingleProductComponent } from './single-product.component';
+import { SlickModule } from 'ngx-slick';
  
 @NgModule({
     imports: [
@@ -14,7 +15,8 @@ import { SingleProductComponent } from './single-product.component';
         FormsModule,
         ReactiveFormsModule,
         HttpClientModule,
-        HttpModule
+        HttpModule,
+        SlickModule.forRoot(),
         ],
     declarations: [SingleProductComponent],
     providers: []

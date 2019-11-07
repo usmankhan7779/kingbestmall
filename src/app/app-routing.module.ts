@@ -17,20 +17,9 @@ const routes: Routes = [
       { path: 'login', loadChildren: './authentication/login/login.module#LoginModule' },
       { path: 'gallery', loadChildren: './component/staticpage/gallery/gallery.module#galleryModule' },
       { path: 'VerfiyEmail/:key', loadChildren: './authentication/verify-email/verify-email.module#VerfiyEmailModule' },
-
-
-      
       { path: 'signup', loadChildren: './component/user-signup/signup.module#UsersignupModule'},
       { path: 'terms', loadChildren: './component/staticpage/terms-use/terms-use.module#TermsUseModule'},
-      { path: 'privacy-policy', loadChildren: './component/staticpage/privacy-policy/privacy-policy.module#PrivacyPolicyModule'},
-
-
-
-      
-
-
-      
-      
+      { path: 'privacy-policy', loadChildren: './component/staticpage/privacy-policy/privacy-policy.module#PrivacyPolicyModule'},      
     ]
   },
 
