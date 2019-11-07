@@ -7,6 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { singleproductsRoutes } from './single-product.routing';
 import { SingleProductComponent } from './single-product.component';
 import { SlickModule } from 'ngx-slick';
+import { ImageZoomModule } from "angular2-image-zoom";
  
 @NgModule({
     imports: [
@@ -16,6 +17,7 @@ import { SlickModule } from 'ngx-slick';
         ReactiveFormsModule,
         HttpClientModule,
         HttpModule,
+        ImageZoomModule,
         SlickModule.forRoot(),
         ],
     declarations: [SingleProductComponent],
