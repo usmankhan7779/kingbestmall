@@ -1,12 +1,12 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { PasswordValidation } from './password-validator.component';
 import swal from 'sweetalert2';
-
 import { RecapchaService } from '../../recapcha/recapcha.service';
 import { RecapchaComponent } from 'src/app/recapcha/recapcha.component';
 import { HttpService } from 'src/app/services/http.service';
+ 
 
 @Component({
   selector: 'app-user-signup',

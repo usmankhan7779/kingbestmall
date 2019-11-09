@@ -50,9 +50,11 @@ import { HttpModule } from '@angular/http';
 import { HttpInterceptors } from './services/_intercepters/http.interceptors';
 import { SlickModule } from 'ngx-slick';
 import { HttpService } from './services/http.service';
-import { UserSignupComponent } from './component/user-signup/user-signup.component';
+import { UserSignupComponent } from './authentication/user-signup/user-signup.component';
 import { AuthGuard } from './services/AuthGuard/auth.guard';
 import { GalleryComponent } from './component/staticpage/gallery/gallery.component';
+import { UserDashboardComponent } from './layouts/user-dashboard/user-dashboard.component';
+import { UserMainDashboardComponent } from './component/user-dashboard/user-main-dashboard/user-main-dashboard.component';
 
 @NgModule({
   exports: [
@@ -90,7 +92,7 @@ import { GalleryComponent } from './component/staticpage/gallery/gallery.compone
     FormsModule,
     MatFormFieldModule
   ],
-  declarations: [ ],
+  declarations: [],
 })
 export class MaterialModule { }
 
@@ -101,6 +103,7 @@ export class MaterialModule { }
     FooterComponent,
     HomeComponent,
     NormalLayoutComponent,
+    UserDashboardComponent
 
 
   ],
