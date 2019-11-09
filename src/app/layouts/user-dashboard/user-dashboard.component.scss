@@ -1,0 +1,38 @@
+.dashboard-layout{
+    display: flex;
+    margin-top: 93px;
+}
+.mt-100px{
+    margin-top: 94px;
+    padding: 0;
+}
+.side-bar{
+    padding: 0 13px;
+    box-shadow: 0px 2px 9px #ccc;
+    width: 330px;
+    li{
+        padding: 5px 0;
+        a {
+            i{
+                width: 25px;
+            }
+        }
+    }
+    ul li:hover a {
+        background: #fff;
+        color: #a91f73;
+    } 
+    ul li a.active {
+        background: #fff;
+        color: #a91f73;
+    }
+}
+.dashboard-body{
+    width: 100%;
+    padding: 20px;
+}
+@media (max-width: 991px) {
+    .side-bar{
+        display: none;
+    }
+}
