@@ -18,6 +18,20 @@ export class HttpService {
   constructor(private http: HttpClient) {
 
   }
+
+  // GetAllCategories() {
+
+  //   return this._http.get(this.ServerUrl + 'Getallcat').map(response => response.json());
+   
+  // }
+  GetAllCategories(): Observable<any> {
+    return this.http.get(this.baseUrl + 'Getallcat').pipe(
+        tap(_ => {
+        }, error => {
+          console.log(error);
+        })
+      );
+  }
     // User Login APi
     login(auth): Observable<any> {
       const s = this.http.post(this.loginUrl + '/api-token-auth/', auth)

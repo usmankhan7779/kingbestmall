@@ -36,7 +36,7 @@ const routes: Routes = [
       // { path: 'buyer-user-shipment', loadChildren: './usershipment/usershipment.module#UserShipmentModule', canActivate: [AuthGuard] },
       // { path: 'user-detail', loadChildren: './user-detail/user-detail.module#UserDetailModule', canActivate: [AuthGuard] },
       // { path: 'account-setting', loadChildren: './buyer-setting/buyer-setting.module#BuyerSettingModule', canActivate: [AuthGuard] },
-      // { path: 'select-categorys', loadChildren: './select-category/select-category.module#SelectCategoryModule',canActivate: [AuthGuard] },
+     { path: 'select-categorys', loadChildren: './component/user-dashboard/select-category/select-category.module#SelectCategoryModule' },
       { path: 'post-ads', loadChildren: './component/user-dashboard/add-new-products/newproduct.module#addnewproductModule' },
       // // { path: 'watch-Product', loadChildren: './watch-product/watch-product.module#WatchProductModule', },
 
