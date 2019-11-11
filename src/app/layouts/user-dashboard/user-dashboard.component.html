@@ -3,51 +3,37 @@
 <div class="dashboard-layout">
     <div class="side-bar">
         <ul  class="">
-            <li ><a  routerlinkactive="active"
-                    href="/dashboard" class="active"><i  aria-hidden="true"
+            <li ><a  routerlinkactive="active" class="active"><i  aria-hidden="true"
                         class="fa fa-tachometer"></i>Seller Dashboard</a></li>
-            <li ><a  routerlinkactive="active"
-                    href="/select-categoryss" class=""><i  aria-hidden="true"
+            <li ><a routerLink="/select-categorys" routerlinkactive="active" class=""><i  aria-hidden="true"
                         class="fa fa-plus-square"></i>Add New Product</a></li>
-            <li ><a  routerlinkactive="active"
-                    href="/seller-product-setting-store"><i  aria-hidden="true"
+            <li ><a  routerlinkactive="active"><i  aria-hidden="true"
                         class="fa fa-cog"></i>My Seller Stores </a></li>
-            <li ><a  routerlinkactive="active"
-                    href="/pending-ad"><i  aria-hidden="true" class="fa fa-check"></i>My
+            <li ><a  routerlinkactive="active"><i  aria-hidden="true" class="fa fa-check"></i>My
                     Pending Ads</a></li>
-            <li ><a  routerlinkactive="active"
-                    href="/user-shipment"><i  class="fa fa-address-book"></i>My Address
+            <li ><a  routerlinkactive="active"><i  class="fa fa-address-book"></i>My Address
                     Book</a></li>
-            <li ><a  routerlinkactive="active"
-                    href="/active-ad"><i  aria-hidden="true" class="fa fa-check-square"></i>My Active Ads</a></li>
-            <li ><a  routerlinkactive="active"
-                    href="/my-bids"><i  class="fa fa-gavel"></i>My Bids</a></li>
-            <li ><a  routerlinkactive="active"
-                    href="/seller-offer"><i  class="fa fa-certificate"></i>My Offers</a>
+            <li ><a  routerlinkactive="active"><i  aria-hidden="true" class="fa fa-check-square"></i>My Active Ads</a></li>
+            <li ><a  routerlinkactive="active"><i  class="fa fa-gavel"></i>My Bids</a></li>
+            <li ><a  routerlinkactive="active"><i  class="fa fa-certificate"></i>My Offers</a>
             </li>
-            <li ><a  routerlinkactive="active"
-                    href="/seller-purchasing"><i  class="fa fa-shopping-cart"></i>My
+            <li ><a  routerlinkactive="active"><i  class="fa fa-shopping-cart"></i>My
                     Purchases</a></li>
-            <li ><a  routerlinkactive="active"
-                    href="/seller-order-receive"><i  class="fa fa-shopping-cart"></i>Orders
+            <li ><a  routerlinkactive="active"><i  class="fa fa-shopping-cart"></i>Orders
                     Received from Buyers</a></li>
-            <li ><a  routerlinkactive="active"
-                    href="/watch-Product-seller"><i  aria-hidden="true"
+            <li ><a  routerlinkactive="active"><i  aria-hidden="true"
                         class="fa fa-list"></i> My Watchlist</a>
                     </li>
-            <li ><a  routerlinkactive="active"
-                    href="/seller-user-detail"><i  class="fa fa-info-circle"></i>My
+            <li ><a  routerlinkactive="active"><i  class="fa fa-info-circle"></i>My
                     Details</a></li>
-            <li ><a  routerlinkactive="active"
-                    href="/seller-setting"><i  class="fa fa-cogs"></i>Account Setting</a>
+            <li ><a  routerlinkactive="active"><i  class="fa fa-cogs"></i>Account Setting</a>
             </li>
-            <li ><a  routerlinkactive="active"
-                    href="/login?Logout=yes"><i  class="fa fa-sign-out-alt"></i>Logout</a>
+            <li ><a  routerlinkactive="active"><i  class="fa fa-sign-out-alt"></i>Logout</a>
             </li>
         </ul>
     </div>
     <div class="dashboard-body">
-        <button (click)="open()">
+        <button class="open" (click)="open()">
             <i class="fa fa-bars"></i>
         </button>
         <router-outlet></router-outlet>

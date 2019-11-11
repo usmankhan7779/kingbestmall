@@ -1751,8 +1751,8 @@ li.sale-noti > a {
   height: 22px;
   border-radius: 11px;
   position: absolute;
-  top: 12px;
-  left: 12px;
+  top: 8px;
+  left: 8px;
 }
 
 .block2-labelsale::before {
@@ -1761,7 +1761,7 @@ li.sale-noti > a {
 }
 
 .block2-labelnew::before {
-  background-color: #66a8a6;
+  background-color: #a91f73;
   content: 'New';
 }
 

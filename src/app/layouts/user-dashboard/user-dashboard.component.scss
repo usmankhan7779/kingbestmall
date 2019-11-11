@@ -13,6 +13,7 @@
     li{
         padding: 5px 0;
         a {
+            cursor: pointer;
             i{
                 width: 25px;
             }
@@ -27,11 +28,17 @@
         color: #a91f73;
     }
 }
+.open{
+    display: none;
+}
 .dashboard-body{
     width: 100%;
     padding: 20px;
 }
 @media (max-width: 991px) {
+    .open{
+        display: block;
+    }
     .side-bar{
         display: none;
     }
