@@ -55,6 +55,7 @@ import { AuthGuard } from './services/AuthGuard/auth.guard';
 import { GalleryComponent } from './component/staticpage/gallery/gallery.component';
 import { UserDashboardComponent } from './layouts/user-dashboard/user-dashboard.component';
 import { UserMainDashboardComponent } from './component/user-dashboard/user-main-dashboard/user-main-dashboard.component';
+import { AddNewProductsComponent } from './component/user-dashboard/add-new-products/add-new-products.component';
 
 @NgModule({
   exports: [
