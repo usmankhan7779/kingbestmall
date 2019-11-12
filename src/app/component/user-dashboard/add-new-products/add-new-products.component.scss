@@ -1,6 +1,9 @@
 .w50{
     width: 50%;
 }
+.w100{
+    width: 100%;
+}
 .mt10{
     margin-top: 10px;
 }
@@ -68,7 +71,6 @@
         }
     }
     .tabs-btn{
-        text-align: right;
         button{
             background: linear-gradient(90deg,#a91f73 0,#ff4270 100%);
             border-radius: 50px;
