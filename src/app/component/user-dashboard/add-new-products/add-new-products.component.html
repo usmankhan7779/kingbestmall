@@ -46,7 +46,7 @@
   <mat-step [stepControl]="secondFormGroup">
     <form class="input-forms" [formGroup]="secondFormGroup">
       <ng-template matStepLabel>
-          <img class="icon" src="../../../../assets/images/icons/address.png">
+          <img class="icon" src="../../../../assets/images/icons/address2.png">
           Price Products</ng-template>
       <!-- <mat-form-field>
         <input matInput placeholder="Store Name" formControlName="StoreName" required>
@@ -113,47 +113,71 @@
     </form>
   </mat-step>
   <mat-step [stepControl]="thirdFromGroup">
-    <form [formGroup]="thirdFromGroup">
+    <form class="input-forms" [formGroup]="thirdFromGroup">
       <ng-template matStepLabel>
           <img class="icon" src="../../../../assets/images/icons/done.png">
         Product Details</ng-template>
-      <mat-form-field>
-        <input matInput placeholder="Product Condition" formControlName="P_Condition" required>
-        <mat-error
-        *ngIf="thirdFromGroup.controls['P_Condition'].value == '' || !thirdFromGroup.controls['P_Condition'].value">
-        <strong>Please Enter the Product Condition</strong></mat-error>
-      </mat-form-field>
 
-      <mat-form-field>
-        <input matInput placeholder="Product Quantity" formControlName="Quantity" required>
-        <mat-error
-        *ngIf="thirdFromGroup.controls['Quantity'].value == '' || !thirdFromGroup.controls['Quantity'].value">
-        <strong>Please Enter the Product Title</strong></mat-error>
-      </mat-form-field>
-      <mat-form-field>
-        <input matInput placeholder="Product Max Quantity" formControlName="MaxQuantity" required>
-        <mat-error
-        *ngIf="thirdFromGroup.controls['MaxQuantity'].value == '' || !thirdFromGroup.controls['MaxQuantity'].value">
-        <strong>Please Enter the Product Title</strong></mat-error>
-      </mat-form-field>
-      <mat-form-field>
-        <input matInput placeholder="Discount Price" formControlName="Discountprice" required>
-        <mat-error
-        *ngIf="thirdFromGroup.controls['Discountprice'].value == '' || !thirdFromGroup.controls['Discountprice'].value">
-        <strong>Please Enter the Product Discountprice</strong></mat-error>
-      </mat-form-field>
-      <mat-form-field>
-        <input matInput placeholder="Discount Status" formControlName="DicountStatus" required>
-        <mat-error
-        *ngIf="thirdFromGroup.controls['DicountStatus'].value == '' || !thirdFromGroup.controls['DicountStatus'].value">
-        <strong>Please Enter the Product Title</strong></mat-error>
-      </mat-form-field>
-      <mat-form-field>
-        <input matInput placeholder="Product active /Deactive" formControlName="product_ad_active" required>
-        <mat-error
-        *ngIf="thirdFromGroup.controls['product_ad_active'].value == '' || !thirdFromGroup.controls['product_ad_active'].value">
-        <strong>Please Enter the Product status</strong></mat-error>
-      </mat-form-field>
+        <div class="row">
+
+          <div class="col-lg-4">
+              <mat-form-field class="w100">
+                  <input matInput placeholder="Product Condition" formControlName="P_Condition" required>
+                  <mat-error
+                  *ngIf="thirdFromGroup.controls['P_Condition'].value == '' || !thirdFromGroup.controls['P_Condition'].value">
+                  <strong>Please Enter the Product Condition</strong></mat-error>
+                </mat-form-field>
+          </div>
+
+          <div class="col-lg-4">
+              <mat-form-field class="w100">
+                  <input matInput placeholder="Product Quantity" formControlName="Quantity" required>
+                  <mat-error
+                  *ngIf="thirdFromGroup.controls['Quantity'].value == '' || !thirdFromGroup.controls['Quantity'].value">
+                  <strong>Please Enter the Product Title</strong></mat-error>
+                </mat-form-field>
+          </div>
+
+        
+          <div class="col-lg-4">
+              <mat-form-field class="w100">
+                  <input matInput placeholder="Product Max Quantity" formControlName="MaxQuantity" required>
+                  <mat-error
+                  *ngIf="thirdFromGroup.controls['MaxQuantity'].value == '' || !thirdFromGroup.controls['MaxQuantity'].value">
+                  <strong>Please Enter the Product Title</strong></mat-error>
+                </mat-form-field>
+          </div>
+             
+          <div class="col-lg-4">
+              <mat-form-field class="w100">
+                  <input matInput placeholder="Discount Price" formControlName="Discountprice" required>
+                  <mat-error
+                  *ngIf="thirdFromGroup.controls['Discountprice'].value == '' || !thirdFromGroup.controls['Discountprice'].value">
+                  <strong>Please Enter the Product Discountprice</strong></mat-error>
+                </mat-form-field>
+          </div>
+
+          <div class="col-lg-4">
+              <mat-form-field class="w100">
+                  <input matInput placeholder="Discount Status" formControlName="DicountStatus" required>
+                  <mat-error
+                  *ngIf="thirdFromGroup.controls['DicountStatus'].value == '' || !thirdFromGroup.controls['DicountStatus'].value">
+                  <strong>Please Enter the Product Title</strong></mat-error>
+                </mat-form-field>
+          </div>
+          
+          <div class="col-lg-4">
+              <mat-form-field class="w100">
+                  <input matInput placeholder="Product active /Deactive" formControlName="product_ad_active" required>
+                  <mat-error
+                  *ngIf="thirdFromGroup.controls['product_ad_active'].value == '' || !thirdFromGroup.controls['product_ad_active'].value">
+                  <strong>Please Enter the Product status</strong></mat-error>
+                </mat-form-field>
+          </div>
+             
+          </div>
+
+      
       
       <!-- <mat-form-field>
         <mat-label>Select Your Store</mat-label>
