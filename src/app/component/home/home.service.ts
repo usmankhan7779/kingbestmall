@@ -33,7 +33,7 @@ export class HomeService {
     }
 
     Get_productfromAll(): Observable<any> {
-      return this.http.get(this.baseUrl + 'getProductsfromAllCAtHome/').pipe(
+      return this.http.get(this.baseUrl + 'DailyDeals/').pipe(
           tap(_ => {
           }, error => {
             console.log(error);
@@ -42,7 +42,7 @@ export class HomeService {
     }
 
     GetAllFeaturedProducts(): Observable<any> {
-      return this.http.get(this.baseUrl + 'getFeaturedProductHome/').pipe(
+      return this.http.get(this.baseUrl + 'FeatureDeals/').pipe(
           tap(_ => {
           }, error => {
             console.log(error);

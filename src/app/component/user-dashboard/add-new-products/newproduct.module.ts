@@ -17,26 +17,10 @@ const loginRoutes: Routes = [
 
   imports: [
     CommonModule,
-
-
     FormsModule,
-
     MaterialModule,
     ReactiveFormsModule,
-    // ReactiveFormsModule,
     RouterModule.forChild(loginRoutes)
-
-
-
-
-
-
-    // NgxUploaderModule,
-    // TextMaskModule,
-
-    // TextMaskModule,
-
-
   ],
 
   providers: [],

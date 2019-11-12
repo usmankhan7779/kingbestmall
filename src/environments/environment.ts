@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'https://apis.kingbestmall.com/products/',
+  apiUrl: 'https://apis.kingbestmall.com/Products/',
   userurl:'https://apis.kingbestmall.com/User/',
   usman:'https://apis.kingbestmall.com/'
 };
