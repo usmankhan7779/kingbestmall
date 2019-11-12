@@ -18,12 +18,7 @@ export class HttpService {
   constructor(private http: HttpClient) {
 
   }
-
-  // GetAllCategories() {
-
-  //   return this._http.get(this.ServerUrl + 'Getallcat').map(response => response.json());
-   
-  // }
+ 
   GetAllCategories(): Observable<any> {
     return this.http.get(this.baseUrl + 'Getallcat').pipe(
         tap(_ => {
@@ -79,5 +74,18 @@ UserConfirm(auth): Observable<any> {
     );
   return s;
 }
+
+
+
+// GetStoreInformationByUserId() {
+//   const headers = new Headers();
+
+//   headers.append('Content-Type', 'application/json');
+//   headers.append('Authorization', 'Token ' + localStorage.getItem('Authorization'));
+//   // console.log('pofile', localStorage.getItem('Authorization'));
+//   return this._http.get(this.productsUrl + 'all_stores_names/' ,{headers :headers}).map((response: Response) => response.json());
+//   // http://192.168.30.225:8000/products/all_stores_names/
+//   //  this.StoreServerUrl 
+// }
     // /User/SignUp/
 }

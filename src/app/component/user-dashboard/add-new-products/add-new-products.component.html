@@ -1,8 +1,25 @@
  
-<mat-horizontal-stepper [linear]="isLinear" #stepper>
-  <mat-step [stepControl]="firstFormGroup" >
-    <form [formGroup]="firstFormGroup">
-      <ng-template matStepLabel>Enter Your Product Name </ng-template>
+<div class="post-ads">
+  <mat-horizontal-stepper [linear]="isLinear" #stepper>
+    <mat-step [stepControl]="firstFormGroup">
+      <form class="input-forms" [formGroup]="firstFormGroup">
+        <ng-template matStepLabel>
+            <img class="icon" src="../../../../assets/images/icons/User.png">
+          Enter Your Product Name </ng-template>
+     
+
+        <div class="col-md-12 text-center">
+          <div class="formrow-1">
+            <div class="uploadphotobx"><i 
+                class="fa fa-cloud-upload"></i>
+              <h4 >Upload Product photos</h4>
+              <p >It must be a head-shot photo</p><label 
+                class="uploadBox">Click to Upload Cover Photos <input accept="image/*"
+                  class="file" data-preview-file-type="text" id="file1" multiple="" name="file" type="file"></label>
+            </div>
+          </div>
+          <div class="mt10">
+            <mat-form-field class="w50">
    
               <input matInput #input maxlength="1000" name="Title" placeholder="Product Title"
               formControlName="P_Title" required>
@@ -23,36 +40,14 @@
         </div>
       </form>
     </mat-step>
-    <mat-step [stepControl]="secondFormGroup">
-      <form class="input-forms" [formGroup]="secondFormGroup">
-        <ng-template matStepLabel>
-            <img class="icon" src="../../../../assets/images/icons/address.png">
-          Fill out your address</ng-template>
-        <div class="col-lg-12 text-center">
-          <mat-form-field class="w50">
-            <input matInput placeholder="Address" formControlName="secondCtrl" required>
-          </mat-form-field>
-        </div>
-        
-        <div class="tabs-btn">
-          <button mat-button matStepperPrevious>Back</button>
-          <button mat-button matStepperNext>Next</button>
-        </div>
-      </form>
-    </mat-step>
-    <mat-step>
-      <ng-template matStepLabel>
-          <img class="icon" src="../../../../assets/images/icons/done.png">
-        Done</ng-template>
-      <div class="done-tab text-center">
-        <h4>You are now done.</h4>
-      </div>
-    </form>
-  </mat-step>
+    
+    
  
   <mat-step [stepControl]="secondFormGroup">
     <form [formGroup]="secondFormGroup">
-      <ng-template matStepLabel>Price Products</ng-template>
+      <ng-template matStepLabel>
+          <img class="icon" src="../../../../assets/images/icons/address.png">
+          Price Products</ng-template>
       <mat-form-field>
         <input matInput placeholder="Store Name" formControlName="StoreName" required>
         <mat-error
@@ -95,7 +90,7 @@
           <strong>Please Select the StoreName</strong></mat-error>
 
       </mat-form-field> -->
-      <div>
+      <div class="tabs-btn">
         <button mat-button matStepperPrevious>Back</button>
         <button mat-button matStepperNext>Next</button>
       </div>
@@ -103,7 +98,9 @@
   </mat-step>
   <mat-step [stepControl]="thirdFromGroup">
     <form [formGroup]="thirdFromGroup">
-      <ng-template matStepLabel>Product Details</ng-template>
+      <ng-template matStepLabel>
+          <img class="icon" src="../../../../assets/images/icons/done.png">
+        Product Details</ng-template>
       <mat-form-field>
         <input matInput placeholder="Product Condition" formControlName="P_Condition" required>
         <mat-error
@@ -155,10 +152,11 @@
           <strong>Please Select the StoreName</strong></mat-error>
 
       </mat-form-field> -->
-      <div>
+      <div class="tabs-btn">
         <button mat-button matStepperPrevious>Back</button>
         <button mat-button (click)="stepper.reset()">Reset</button>
       </div>
+      </form>
     </mat-step>
   </mat-horizontal-stepper>
 </div>
