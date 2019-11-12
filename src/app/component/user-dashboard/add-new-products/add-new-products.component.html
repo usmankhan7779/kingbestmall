@@ -36,7 +36,7 @@
 
         
         <div class="tabs-btn">
-          <button mat-button matStepperNext >Next</button>
+          <button class="pull-right" mat-button matStepperNext >Next</button>
         </div>
       </form>
     </mat-step>
@@ -44,7 +44,7 @@
     
  
   <mat-step [stepControl]="secondFormGroup">
-    <form [formGroup]="secondFormGroup">
+    <form class="input-forms" [formGroup]="secondFormGroup">
       <ng-template matStepLabel>
           <img class="icon" src="../../../../assets/images/icons/address.png">
           Price Products</ng-template>
@@ -55,28 +55,44 @@
         <strong>Please Enter the Product Title</strong></mat-error>
       </mat-form-field> -->
 
-      <mat-form-field>
-        <input matInput placeholder="Select Category" formControlName="Cat_Name" required>
-        <mat-error
-        *ngIf="secondFormGroup.controls['Cat_Name'].value == '' || !secondFormGroup.controls['Cat_Name'].value">
-        <strong>Please Enter the Product Title</strong></mat-error>
-      </mat-form-field>
-      <mat-form-field>
-        <input matInput placeholder="Select Sub Category" formControlName="Sub_Cat_Name" required>
-        <mat-error
-        *ngIf="secondFormGroup.controls['Sub_Cat_Name'].value == '' || !secondFormGroup.controls['Sub_Cat_Name'].value">
-        <strong>Please Enter the Product Title</strong></mat-error>
-      </mat-form-field>
-      <mat-form-field >
-        <textarea rows="8" matInput cols="100" maxlength="2000"
-          class="mat-input  text-capitl Ad-details-text-area" name="Addetail"  
-          matInput placeholder="Add Detail" formControlName="P_Des" required></textarea>
-        <mat-error
-          *ngIf="secondFormGroup.controls['P_Des'].value == '' || !secondFormGroup.controls['P_Des'].value">
-          <strong>Please enter the products description</strong></mat-error>
+      <div class="row">
+
+        <div class="col-lg-6">
+            <mat-form-field class="w100">
+                <input matInput placeholder="Select Category" formControlName="Cat_Name" required>
+                <mat-error
+                *ngIf="secondFormGroup.controls['Cat_Name'].value == '' || !secondFormGroup.controls['Cat_Name'].value">
+                <strong>Please Enter the Product Title</strong></mat-error>
+            </mat-form-field>
+        </div>
+         
+          <div class="col-lg-6">
+              <mat-form-field class="w100">
+                  <input matInput placeholder="Select Sub Category" formControlName="Sub_Cat_Name" required>
+                  <mat-error
+                  *ngIf="secondFormGroup.controls['Sub_Cat_Name'].value == '' || !secondFormGroup.controls['Sub_Cat_Name'].value">
+                  <strong>Please Enter the Product Title</strong></mat-error>
+              </mat-form-field>
+          </div>
+         
+
+          <div class="col-lg-12">
+              <mat-form-field class="w100">
+                  <textarea rows="8" matInput cols="100" maxlength="2000"
+                    class="mat-input  text-capitl Ad-details-text-area" name="Addetail"  
+                    matInput placeholder="Add Detail" formControlName="P_Des" required></textarea>
+                  <mat-error
+                    *ngIf="secondFormGroup.controls['P_Des'].value == '' || !secondFormGroup.controls['P_Des'].value">
+                    <strong>Please enter the products description</strong></mat-error>
+          
+          
+                </mat-form-field>
+          </div>
+         
 
 
-      </mat-form-field>
+      </div>
+     
       <!-- <mat-form-field>
         <mat-label>Select Your Store</mat-label>
         <mat-select [(ngModel)]="model.StoreName" class="col-md-push-6" name="SessionstoreName" (change)="storess()"
@@ -92,7 +108,7 @@
       </mat-form-field> -->
       <div class="tabs-btn">
         <button mat-button matStepperPrevious>Back</button>
-        <button mat-button matStepperNext>Next</button>
+        <button class="pull-right" mat-button matStepperNext>Next</button>
       </div>
     </form>
   </mat-step>
@@ -154,7 +170,7 @@
       </mat-form-field> -->
       <div class="tabs-btn">
         <button mat-button matStepperPrevious>Back</button>
-        <button mat-button (click)="stepper.reset()">Reset</button>
+        <button class="pull-right" mat-button (click)="stepper.reset()">Reset</button>
       </div>
       </form>
     </mat-step>

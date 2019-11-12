@@ -63,7 +63,7 @@ export class AddNewProductsComponent implements OnInit {
       Sub_Cat_Name: ['',  Validators.compose([Validators.required ])],//done
 
 
-      P_Des: ['',  Validators.compose([Validators.required,Validators.minLength(15)  ])],
+      P_Des: ['',  Validators.compose([Validators.required   ])],
 
       Pic: ['',  Validators.compose([Validators.required ])],
 
