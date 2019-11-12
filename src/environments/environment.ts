@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'https://apis.dhaar.pk/products/',
+  apiUrl: 'https://apis.kingbestmall.com/products/',
   userurl:'https://apis.kingbestmall.com/User/',
   usman:'https://apis.kingbestmall.com/'
 };
