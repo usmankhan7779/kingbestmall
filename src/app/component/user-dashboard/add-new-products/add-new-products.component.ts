@@ -58,7 +58,7 @@ export class AddNewProductsComponent implements OnInit {
       
       Cat_Name: ['',  Validators.compose([Validators.required ])], //done
 
-      StoreName: ['',  Validators.compose([Validators.required ])],//done
+      // StoreName: ['',  Validators.compose([Validators.required ])],//done
       
       Sub_Cat_Name: ['',  Validators.compose([Validators.required ])],//done
 
