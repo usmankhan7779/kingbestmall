@@ -1,6 +1,6 @@
  
 <mat-horizontal-stepper [linear]="isLinear" #stepper>
-  <mat-step [stepControl]="firstFormGroup">
+  <mat-step [stepControl]="firstFormGroup" >
     <form [formGroup]="firstFormGroup">
       <ng-template matStepLabel>Enter Your Product Name </ng-template>
    
@@ -20,12 +20,112 @@
       </div>
     </form>
   </mat-step>
+ 
   <mat-step [stepControl]="secondFormGroup">
     <form [formGroup]="secondFormGroup">
-      <ng-template matStepLabel>Fill out your address</ng-template>
+      <ng-template matStepLabel>Price Products</ng-template>
       <mat-form-field>
-        <input matInput placeholder="Address" formControlName="secondCtrl" required>
+        <input matInput placeholder="Store Name" formControlName="StoreName" required>
+        <mat-error
+        *ngIf="secondFormGroup.controls['StoreName'].value == '' || !secondFormGroup.controls['StoreName'].value">
+        <strong>Please Enter the Product Title</strong></mat-error>
       </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Select Category" formControlName="Cat_Name" required>
+        <mat-error
+        *ngIf="secondFormGroup.controls['Cat_Name'].value == '' || !secondFormGroup.controls['Cat_Name'].value">
+        <strong>Please Enter the Product Title</strong></mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Select Sub Category" formControlName="Sub_Cat_Name" required>
+        <mat-error
+        *ngIf="secondFormGroup.controls['Sub_Cat_Name'].value == '' || !secondFormGroup.controls['Sub_Cat_Name'].value">
+        <strong>Please Enter the Product Title</strong></mat-error>
+      </mat-form-field>
+      <mat-form-field >
+        <textarea rows="8" matInput cols="100" maxlength="2000"
+          class="mat-input  text-capitl Ad-details-text-area" name="Addetail"  
+          matInput placeholder="Add Detail" formControlName="P_Des" required></textarea>
+        <mat-error
+          *ngIf="secondFormGroup.controls['P_Des'].value == '' || !secondFormGroup.controls['P_Des'].value">
+          <strong>Please enter the products description</strong></mat-error>
+
+
+      </mat-form-field>
+      <!-- <mat-form-field>
+        <mat-label>Select Your Store</mat-label>
+        <mat-select [(ngModel)]="model.StoreName" class="col-md-push-6" name="SessionstoreName" (change)="storess()"
+          formControlName="StoreName">
+          <mat-option *ngFor="let data of StoreNamess" [value]="data.StoreName">
+            {{data.StoreName}}
+          </mat-option>
+        </mat-select>
+        <mat-error
+          *ngIf="secondFormGroup.controls['StoreName'].value == '' || !secondFormGroup.controls['StoreName'].value">
+          <strong>Please Select the StoreName</strong></mat-error>
+
+      </mat-form-field> -->
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="thirdFromGroup">
+    <form [formGroup]="thirdFromGroup">
+      <ng-template matStepLabel>Product Details</ng-template>
+      <mat-form-field>
+        <input matInput placeholder="Product Condition" formControlName="P_Condition" required>
+        <mat-error
+        *ngIf="thirdFromGroup.controls['P_Condition'].value == '' || !thirdFromGroup.controls['P_Condition'].value">
+        <strong>Please Enter the Product Condition</strong></mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Product Quantity" formControlName="Quantity" required>
+        <mat-error
+        *ngIf="thirdFromGroup.controls['Quantity'].value == '' || !thirdFromGroup.controls['Quantity'].value">
+        <strong>Please Enter the Product Title</strong></mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Product Max Quantity" formControlName="MaxQuantity" required>
+        <mat-error
+        *ngIf="thirdFromGroup.controls['MaxQuantity'].value == '' || !thirdFromGroup.controls['MaxQuantity'].value">
+        <strong>Please Enter the Product Title</strong></mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Discount Price" formControlName="Discountprice" required>
+        <mat-error
+        *ngIf="thirdFromGroup.controls['Discountprice'].value == '' || !thirdFromGroup.controls['Discountprice'].value">
+        <strong>Please Enter the Product Discountprice</strong></mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Discount Status" formControlName="DicountStatus" required>
+        <mat-error
+        *ngIf="thirdFromGroup.controls['DicountStatus'].value == '' || !thirdFromGroup.controls['DicountStatus'].value">
+        <strong>Please Enter the Product Title</strong></mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Product active /Deactive" formControlName="product_ad_active" required>
+        <mat-error
+        *ngIf="thirdFromGroup.controls['product_ad_active'].value == '' || !thirdFromGroup.controls['product_ad_active'].value">
+        <strong>Please Enter the Product status</strong></mat-error>
+      </mat-form-field>
+      
+      <!-- <mat-form-field>
+        <mat-label>Select Your Store</mat-label>
+        <mat-select [(ngModel)]="model.StoreName" class="col-md-push-6" name="SessionstoreName" (change)="storess()"
+          formControlName="StoreName">
+          <mat-option *ngFor="let data of StoreNamess" [value]="data.StoreName">
+            {{data.StoreName}}
+          </mat-option>
+        </mat-select>
+        <mat-error
+          *ngIf="secondFormGroup.controls['StoreName'].value == '' || !secondFormGroup.controls['StoreName'].value">
+          <strong>Please Select the StoreName</strong></mat-error>
+
+      </mat-form-field> -->
       <div>
         <button mat-button matStepperPrevious>Back</button>
         <button mat-button matStepperNext>Next</button>

@@ -11,26 +11,31 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 
 export class AddNewProductsComponent implements OnInit {
-  isLinear = false;
+  // isLinear = false;
+  isLinear = true;
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
+  thirdFromGroup :FormGroup;
   constructor(private _formBuilder: FormBuilder) { }
 
   ngOnInit() {
 
-
-
-
-
-
-
-
-
     this.firstFormGroup = this._formBuilder.group({
       P_Title: ['',  Validators.compose([Validators.required,Validators.minLength(6) ])]
     });
-    this.secondFormGroup = this._formBuilder.group({
-        //   {
+    
+    this.thirdFromGroup = this._formBuilder.group({
+     
+
+      P_Condition: ['',  Validators.compose([Validators.required ])],
+
+      Quantity: ['',  Validators.compose([Validators.required ])],
+      MaxQuantity: ['',  Validators.compose([Validators.required ])],
+      DicountStatus: ['',  Validators.compose([Validators.required ])],
+      Discountprice: ['',  Validators.compose([Validators.required ])],
+      product_ad_active: ['',  Validators.compose([Validators.required ])],
+
+             //   {
   //     "P_Title": "", Done 
   //     "User_ID": null,
   //     "Cat_Name": null,
@@ -47,25 +52,20 @@ export class AddNewProductsComponent implements OnInit {
   //     "Discountpersentage": null,
   //     "product_ad_active": false
   // }
+    });
+    this.secondFormGroup = this._formBuilder.group({
+ 
       
-      Cat_Name: ['',  Validators.compose([Validators.required ])],
+      Cat_Name: ['',  Validators.compose([Validators.required ])], //done
 
-      StoreName: ['',  Validators.compose([Validators.required ])],
+      StoreName: ['',  Validators.compose([Validators.required ])],//done
       
-      Sub_Cat_Name: ['',  Validators.compose([Validators.required ])],
+      Sub_Cat_Name: ['',  Validators.compose([Validators.required ])],//done
 
-      Sub_Sub_Cat_Name: ['',  Validators.compose([Validators.required ])],
 
       P_Des: ['',  Validators.compose([Validators.required,Validators.minLength(15)  ])],
 
       Pic: ['',  Validators.compose([Validators.required ])],
-      P_Condition: ['',  Validators.compose([Validators.required ])],
-
-      Quantity: ['',  Validators.compose([Validators.required ])],
-      MaxQuantity: ['',  Validators.compose([Validators.required ])],
-      DicountStatus: ['',  Validators.compose([Validators.required ])],
-      Discountprice: ['',  Validators.compose([Validators.required ])],
-      product_ad_active: ['',  Validators.compose([Validators.required ])],
 
     });
   }
