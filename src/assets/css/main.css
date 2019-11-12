@@ -750,13 +750,13 @@ iframe {
   position: relative;
   padding-top: 20px;  
   padding-bottom: 20px; 
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 6px;
+  padding-right: 6px;
 }
 
 .main_menu > li > a {
   font-family: Montserrat-Regular;
-  font-size: 15px;
+  font-size: 14px;
   color: #273c61 !important;
   padding: 0;
   border-bottom: 1px solid transparent;
