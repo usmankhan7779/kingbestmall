@@ -11,8 +11,8 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 
 export class AddNewProductsComponent implements OnInit {
-  isLinear = false;
-  // isLinear = true;
+  // isLinear = false;
+  isLinear = true;
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
   thirdFromGroup :FormGroup;
@@ -65,7 +65,7 @@ export class AddNewProductsComponent implements OnInit {
 
       P_Des: ['',  Validators.compose([Validators.required   ])],
 
-      Pic: ['',  Validators.compose([Validators.required ])],
+      // Pic: ['',  Validators.compose([Validators.required ])],
 
     });
   }
