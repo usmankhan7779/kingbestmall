@@ -12,15 +12,20 @@
             font-weight: 600;
             i{
                 color: #fff;
-                padding: 10px 9px;
                 border-radius: 100%;
                 font-size: 20px;
                 margin-right: 10px;
+                width: 35px;
+                height: 35px;
+                display: flex;
+                float: left;
+                justify-content: center;
+                align-items: center;
             }
         }
         h5{
             text-align: center;
-            margin: 10px;
+            margin: 15px 0;
             font-size: 30px;
         }
         span{
