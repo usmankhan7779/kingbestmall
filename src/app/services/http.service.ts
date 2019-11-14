@@ -76,36 +76,12 @@ UserConfirm(auth): Observable<any> {
 }
 changepass( currPass: string, pass1: string, pass2: string) {
 
-  return this.http.post(this.userUrl + 'ChangePassword', {
-    // 'email': username,
-    'current': currPass,
-    'pass1': pass1,
-    'pass2': pass2
-  })  .map((res: Response) => {
-
-    if (res) {
-      if (res.status === 201 || res.status === 200) {
-        const responce_data = res.json();
-        return responce_data;
-      }
-    }
-  }).catch((error: any) => {
-
-    if (error.status !== 404) {
-      if (error.status === 401) {
-        console.log(error);
-
-        return Observable.throw(new Error(error.status));
-      }
-
-
-    } else {
-      console.log(error);
-      //   this._nav.navigate(['/login']);
-
-      return Observable.throw(new Error(error.status));
-    }
-  }); 
+  // return this.http.post(this.userUrl + 'ChangePassword', {
+  //   // 'email': username,
+  //   'current': currPass,
+  //   'pass1': pass1,
+  //   'pass2': pass2
+  // })  
 }
 
 
