@@ -65,7 +65,7 @@ export class AddNewProductsComponent implements OnInit {
 
       P_Des: ['',  Validators.compose([Validators.required   ])],
 
-      // Pic: ['',  Validators.compose([Validators.required ])],
+      Pic: ['',  Validators.compose([Validators.required ])],
 
     });
   }
