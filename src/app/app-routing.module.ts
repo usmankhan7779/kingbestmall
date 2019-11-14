@@ -27,6 +27,10 @@ const routes: Routes = [
     path: '',    component: UserDashboardComponent,
     children: [
       { path: 'user-dashboard', loadChildren: './component/user-dashboard/user-main-dashboard/user-main.module#usermainModule' },
+      { path: 'changepassword', loadChildren: './component/user-dashboard/seller-setting/seller-setting.module#SellerSettingModule' },
+
+      // { path: 'change-password', loadChildren: './component/user-dashboard/change-password/change-password.module#ChangePasswordModule' },
+
       // { path: 'my-bids-buyer', loadChildren: './my-bids-buyer/my-bids-buyer.module#MyBidsBuyerModule', canActivate: [AuthGuard] },
       // { path: 'buyer-orders', loadChildren: './buyer-order/buyer-order.module#BuyerOrderModule', canActivate: [AuthGuard] },
       // { path: 'buyer-invoice', loadChildren: './buyer-invoice/buyer-invoice.module#BuyerInvoiceModule', canActivate: [AuthGuard] },

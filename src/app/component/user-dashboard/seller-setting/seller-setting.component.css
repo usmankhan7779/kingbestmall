@@ -1,0 +1,34 @@
+::-webkit-input-placeholder {
+    font-size: 25px!important }
+ 
+ :-moz-placeholder { /* Firefox 18- */
+       font-size: 25px;
+ }
+ 
+ ::-moz-placeholder {  /* Firefox 19+ */
+       font-size: 25px;
+ }
+ 
+ /* Overriding styles */
+ 
+ ::-webkit-input-placeholder {
+    font-size: 13px!important;
+ }
+ .border-bottom-no{
+      border-bottom: none !important;
+    }
+ :-moz-placeholder { /* Firefox 18- */
+       font-size: 13px!important;
+ }
+ ::-moz-placeholder {  /* Firefox 19+ */
+       font-size: 13px!important;
+ }
+ .password-heading{
+      text-align: center;
+      font-size: 22px;
+      color: white;
+      border-radius: 5px;
+      height: 40px;
+      padding: 4px;
+      background-color: black;
+  }
