@@ -1,0 +1,59 @@
+.overview{
+    h2{
+        margin: 0 0 20px;
+    }
+    .view-box{
+        box-shadow: 0 4px 8px #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        p{
+            font-size: 18px;
+            color: #000;
+            font-weight: 600;
+            i{
+                color: #fff;
+                padding: 10px 9px;
+                border-radius: 100%;
+                font-size: 20px;
+                margin-right: 10px;
+            }
+        }
+        h5{
+            text-align: center;
+            margin: 10px;
+            font-size: 30px;
+        }
+        span{
+            display: block;
+            text-align: center;
+            color: #9c9c9c;
+        }
+    }
+    .fa-shopping-basket{
+        background: #eb6709;
+    }
+    .fa-usd{
+        background: #a91f73;
+    }
+    .fa-eye{
+        background: #11c26d;
+    }
+    .fa-user{
+        background: #3e8ef7;
+    }
+}
+.graph{
+    img{
+        width: 100%;
+    }
+}
+.table-box{
+    h2{
+        margin: 20px 0;
+    }
+    .table{
+        box-shadow: 0 4px 8px #ccc;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+}
