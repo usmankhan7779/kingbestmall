@@ -29,7 +29,7 @@ const routes: Routes = [
       { path: 'user-dashboard', loadChildren: './component/user-dashboard/user-main-dashboard/user-main.module#usermainModule' },
       { path: 'changepassword', loadChildren: './component/user-dashboard/seller-setting/seller-setting.module#SellerSettingModule' },
 
-      // { path: 'change-password', loadChildren: './component/user-dashboard/change-password/change-password.module#ChangePasswordModule' },
+      { path: 'watchlist', loadChildren: './component/user-dashboard/watchlist/watchlist.module#WatchlistModule' },
 
       // { path: 'my-bids-buyer', loadChildren: './my-bids-buyer/my-bids-buyer.module#MyBidsBuyerModule', canActivate: [AuthGuard] },
       // { path: 'buyer-orders', loadChildren: './buyer-order/buyer-order.module#BuyerOrderModule', canActivate: [AuthGuard] },

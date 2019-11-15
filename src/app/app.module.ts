@@ -51,7 +51,8 @@ import { HttpInterceptors } from './services/_intercepters/http.interceptors';
 import { SlickModule } from 'ngx-slick';
 import { HttpService } from './services/http.service'; 
 import { AuthGuard } from './services/AuthGuard/auth.guard'; 
-import { UserDashboardComponent } from './layouts/user-dashboard/user-dashboard.component'; 
+import { UserDashboardComponent } from './layouts/user-dashboard/user-dashboard.component';
+// import { WatchlistComponent } from './component/user-dashboard/watchlist/watchlist.component'; 
 
 @NgModule({
   exports: [
@@ -89,7 +90,9 @@ import { UserDashboardComponent } from './layouts/user-dashboard/user-dashboard.
     FormsModule,
     MatFormFieldModule
   ],
-  declarations: [],
+  declarations: [
+    // WatchlistComponent
+  ],
 })
 export class MaterialModule { }
 
