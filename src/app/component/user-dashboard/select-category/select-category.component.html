@@ -20,7 +20,7 @@
             <!-- *ngIf="sellers" -->
       <ng-container *ngFor="let item_cat of GetallCat">
           <!-- [queryParams]="{ CatName:  item_cat.Cat_Name, CatId: item_cat.id }" -->
-      <li class="col-md-2 col-sm-3 col-xs-6"><a  [routerLink]="['/post-ad']"  [queryParams]="{ CatName:  item_cat.Cat_Name, CatId: item_cat.id }"><img src="{{ ServrUrl + item_cat.Pic }}" alt="Cate Img" /> <span>{{ item_cat.Cat_Name }}</span></a></li>
+      <li class="col-md-2 col-sm-3 col-xs-6"><a  [routerLink]="['/post-ads']"  [queryParams]="{ CatName:  item_cat.Cat_Name, CatId: item_cat.id }"><img src="{{ ServrUrl + item_cat.Pic }}" alt="Cate Img" /> <span>{{ item_cat.Cat_Name }}</span></a></li>
       </ng-container>
        
   

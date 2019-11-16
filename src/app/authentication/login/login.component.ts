@@ -31,6 +31,7 @@ export class LoginComponent implements OnInit {
     this.http.login(auth).subscribe(
       data => {
         localStorage.setItem('token', data.token);
+        localStorage.setItem('user','yes')
   
         Swal.fire(
           'Logged In!',
@@ -39,7 +40,7 @@ export class LoginComponent implements OnInit {
         );
         // this.toastr.success(data['response']);
         if( res.Role == 'U'){
-           this._nav.navigate(['/aboutus'])
+           this._nav.navigate(['/user-dashboard'])
         }
         else if (res.Role == 'V')
         this._nav.navigate(['/'])

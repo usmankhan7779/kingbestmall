@@ -4,9 +4,10 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'https://apis.dhaar.pk/products/',
-  userurl:'https://apis.kingbestmall.com/User/',
-  usman:'https://apis.kingbestmall.com/'
+ loginUrl: 'https://apis.kingbestmall.com/',
+producturl:'https://apis.kingbestmall.com/Products/',
+userurl:'https://apis.kingbestmall.com/User/',
+listurl:'https://apis.kingbestmall.com/List/'
 };
 
 /*

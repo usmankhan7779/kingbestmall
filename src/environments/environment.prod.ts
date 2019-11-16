@@ -1,7 +1,10 @@
 export const environment = {
-  production: true,
-  apiUrl: 'https://apis.dhaar.pk/products/',
-  userurl:'https://apis.kingbestmall.com/user/',
-  usman:'https://apis.kingbestmall.com/'
+ 
+  production: false,
+  loginUrl: 'https://apis.kingbestmall.com/',
+  producturl:'https://apis.kingbestmall.com/Products/',
+   userurl:'https://apis.kingbestmall.com/User/',
+   listurl:'https://apis.kingbestmall.com/List/'
+  // usman:'http://192.168.29.148:8000/'
   
 };

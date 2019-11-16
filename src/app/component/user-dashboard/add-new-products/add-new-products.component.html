@@ -48,22 +48,28 @@
       <ng-template matStepLabel>
           <img class="icon" src="../../../../assets/images/icons/address2.png">
           Price Products</ng-template>
-      <!-- <mat-form-field>
-        <input matInput placeholder="Store Name" formControlName="StoreName" required>
-        <mat-error
-        *ngIf="secondFormGroup.controls['StoreName'].value == '' || !secondFormGroup.controls['StoreName'].value">
-        <strong>Please Enter the Product Title</strong></mat-error>
-      </mat-form-field> -->
+     
 
       <div class="row">
 
         <div class="col-lg-6">
-            <mat-form-field class="w100">
+            <!-- <mat-form-field class="w100">
                 <input matInput placeholder="Select Category" formControlName="Cat_Name" required>
                 <mat-error
                 *ngIf="secondFormGroup.controls['Cat_Name'].value == '' || !secondFormGroup.controls['Cat_Name'].value">
                 <strong>Please Enter the Product Title</strong></mat-error>
-            </mat-form-field>
+            </mat-form-field> -->
+            <mat-select   class="col-md-push-6" name="Subcat" formControlName="Cat_Name">
+              <!-- <mat-optgroup *ngFor="let item of GetAllSubCat" label="{{ item.Cat_Name}}"> -->
+                <!-- <ng-container *ngFor="let item_sub of GetAllSubCat"> -->
+                  <mat-option  *ngFor="let item_sub of GetAllSubCat" [value]="item.Cat_Name">
+                    {{ item.Cat_Name }}
+                  </mat-option>
+                <!-- </ng-container> -->
+              <!-- </mat-optgroup> -->
+
+
+            </mat-select>
         </div>
          
           <div class="col-lg-6">
@@ -138,7 +144,7 @@
                 </mat-form-field>
           </div>
 
-        
+<!--         
           <div class="col-lg-4">
               <mat-form-field class="w100">
                   <input matInput placeholder="Product Max Quantity" formControlName="MaxQuantity" required>
@@ -146,7 +152,7 @@
                   *ngIf="thirdFromGroup.controls['MaxQuantity'].value == '' || !thirdFromGroup.controls['MaxQuantity'].value">
                   <strong>Please Enter the Product Title</strong></mat-error>
                 </mat-form-field>
-          </div>
+          </div> -->
              
           <div class="col-lg-4">
               <mat-form-field class="w100">
@@ -156,7 +162,7 @@
                   <strong>Please Enter the Product Discountprice</strong></mat-error>
                 </mat-form-field>
           </div>
-
+<!-- 
           <div class="col-lg-4">
               <mat-form-field class="w100">
                   <input matInput placeholder="Discount Status" formControlName="DicountStatus" required>
@@ -164,16 +170,16 @@
                   *ngIf="thirdFromGroup.controls['DicountStatus'].value == '' || !thirdFromGroup.controls['DicountStatus'].value">
                   <strong>Please Enter the Product Title</strong></mat-error>
                 </mat-form-field>
-          </div>
+          </div> -->
           
-          <div class="col-lg-4">
+          <!-- <div class="col-lg-4">
               <mat-form-field class="w100">
                   <input matInput placeholder="Product active /Deactive" formControlName="product_ad_active" required>
                   <mat-error
                   *ngIf="thirdFromGroup.controls['product_ad_active'].value == '' || !thirdFromGroup.controls['product_ad_active'].value">
                   <strong>Please Enter the Product status</strong></mat-error>
                 </mat-form-field>
-          </div>
+          </div> -->
              
           </div>
 
@@ -194,7 +200,7 @@
       </mat-form-field> -->
       <div class="tabs-btn">
         <button mat-button matStepperPrevious>Back</button>
-        <button class="pull-right" mat-button (click)="stepper.reset()">Reset</button>
+        <button class="pull-right" mat-button (click)="onRegister()">Reset</button>
       </div>
       </form>
     </mat-step>
