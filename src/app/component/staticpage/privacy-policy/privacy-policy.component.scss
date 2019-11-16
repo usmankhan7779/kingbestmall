@@ -1,1 +1,39 @@
-.terms-use{padding:30px;border:1px solid #dadada;box-shadow:0 0 10px -2px;margin:165px auto}.ribbon{position:relative;text-align:center;color:#000;clear:both;padding:10px 10px 10px 20px}.ribbon+p{clear:both}p{margin-bottom:8px}
+.terms-use {
+    padding: 30px;
+    border: 1px solid #dadada;
+    box-shadow: 0 0 10px -2px;
+    margin: 115px auto 20px;
+    border-radius: 10px;
+    h2{
+        font-size: 30px;
+    }
+    h3{
+        font-size: 26px;
+        text-align: left;
+        padding: 10px 0;
+    }
+    h4{
+        font-size: 22px;
+        text-align: left;
+        padding: 10px 0;
+    }
+}
+
+.ribbon {
+    position: relative;
+    text-align: center;
+    color: #000;
+    clear: both;
+    padding: 10px 10px 10px 20px
+}
+
+.ribbon+p {
+    clear: both
+}
+
+p {
+    margin-bottom: 5px;
+    font-size: 13px;
+    line-height: 21px;
+    font-family: inherit;
+}

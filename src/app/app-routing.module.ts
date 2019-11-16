@@ -20,7 +20,8 @@ const routes: Routes = [
       { path: 'VerfiyEmail/:key', loadChildren: './authentication/verify-email/verify-email.module#VerfiyEmailModule' },
       { path: 'signup', loadChildren: './authentication/user-signup/signup.module#UsersignupModule'},
       { path: 'terms', loadChildren: './component/staticpage/terms-use/terms-use.module#TermsUseModule'},
-      { path: 'privacy-policy', loadChildren: './component/staticpage/privacy-policy/privacy-policy.module#PrivacyPolicyModule'},      
+      { path: 'privacy-policy', loadChildren: './component/staticpage/privacy-policy/privacy-policy.module#PrivacyPolicyModule'}, 
+      { path: 'product', loadChildren: './component/product/product.module#ProductModule'},     
     ]
   },
   {
