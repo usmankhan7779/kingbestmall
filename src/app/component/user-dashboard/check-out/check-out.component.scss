@@ -1,0 +1,154 @@
+.main-container {
+    min-height: 350px;
+    padding: 25px 0 0;
+    margin-top: 100px;
+    .page-title{
+        margin-bottom: 10px;
+        h2{
+            font-weight: 600;
+            font-family: Montserrat-Regular;
+        }
+    }
+    .checkout-table {
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 2px 6px #ccc;
+        thead{
+            tr{
+                background: linear-gradient(90deg, #a91f73 0, #ff4270 100%);
+                color: #fff;
+            }
+        }
+        img{
+            width: 100px;
+        }
+        .qty-td{
+            display: flex;
+            p{
+                width: 40px;
+                padding: 0 5px;
+                text-align: center;
+                line-height: 19px;
+            }
+            button{
+                width: 20px;
+                height: 20px;
+                background: #e2e1e1;
+                border-radius: 5px;
+                line-height: 0;
+                font-size: 25px;
+            }
+        }
+        .icons{
+            i{
+                margin: 0 5px;
+            }
+        }
+    }
+    .bg-light-grey {
+        background: #fafafa;
+    }
+    .address-title-container {
+        margin-bottom: 8px;
+        padding-bottom: 10px;
+        float: left;
+        width: 100%;
+    }
+    .address-heading {
+        font-size: 18px;
+        line-height: 24px;
+        color: #212121;
+        font-weight: 500;
+        padding-top: 16px;
+        margin-bottom: 14px;
+        font-weight: 600;
+    }
+    .checkout-summary-label {
+        font-size: 14px;
+        color: #757575;
+        letter-spacing: 0;
+        line-height: 16px;
+        vertical-align: middle;
+    }
+    .checkout-summary-value {
+        float: right;
+        font-size: 14px;
+        line-height: 24px;
+        text-align: right;
+        color: #202020;
+        letter-spacing: 0;
+        vertical-align: middle;
+    }
+    .voucher {
+        width: 100%;
+        float: left;
+        margin:10px 0;
+        .voucher-input {
+            width: 70%;
+            height: 38px;
+            margin: 0;
+            padding: 0 8px;
+            border-radius: 5px 0 0 5px;
+            font-size: 14px;
+            background: #fafafa;
+            border: 1px solid #000 !important;
+            border-right: 0;
+            float: left;
+            font-weight: 600;
+        }
+        .voucher-input-button {
+            height: 38px;
+            line-height: 40px;
+            width: 28%;
+            display: block;
+            background: #000;
+            color: #fff;
+            font-size: 14px;
+            text-transform: capitalize;
+            text-align: center;
+            float: left;
+            border-radius: 0 5px 5px 0;
+            border: none;
+            transition: .4s;
+        }
+        
+    } 
+    .price-total {
+        font-size: 18px;
+        line-height: 16px;
+        color: #000;
+        font-weight: 600;
+        font-family: Montserrat-Regular;
+    }
+    .total-number {
+        font-size: 18px;
+        color: #000;
+        cursor: pointer;
+        float: right;
+        font-weight: 600;
+        font-family: Montserrat-Regular;
+    }
+    .btn-order {
+        margin-top: 10px;
+        padding: 8px 12px;
+        text-align: center;
+        background: linear-gradient(90deg, #a91f73 0, #ff4270 100%);
+        color: #fff;
+        border-radius: 30px;
+        text-transform: capitalize;
+        font-size: 16px;
+        font-weight: 600;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+        cursor: pointer;
+        border:1px solid #ff4270;
+        box-shadow: 0 0 15px -2px #ccc;
+        width: 100%;
+        display: block;
+        &:hover{
+            color: #ff4270;
+            background: #fff;
+            border:1px solid #ff4270;
+        }
+    }   
+}
