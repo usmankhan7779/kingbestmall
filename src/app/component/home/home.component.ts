@@ -127,40 +127,40 @@ export class HomeComponent implements OnInit {
         // $('.slick2').fadeOut(0);
         if (this.GetAll_products) {
           setTimeout(function () {
-            // $('.slick2').slick({
-            //   infinite: true,
-            //   slidesToShow: 6,
-            //   slidesToScroll: 1,
-            //   autoplay: true,
-            //   nextArrow: '<i class="fa fa-chevron-left" ></i>',
-            //   prevArrow: '<i class="fa fa-chevron-right" ></i>',
-            //   // prevArrow: '<button class="leftRs" style="left: 30px;"><i class="fa fa-angle-left"></i></button>',
-            //   // nextArrow: '<button class="rightRs" style="right: 30px;"><i class="fa fa-angle-right"></i></button>',
+            $('.slick2').slick({
+              infinite: true,
+              slidesToShow: 6,
+              slidesToScroll: 1,
+              autoplay: true,
+              nextArrow: '<i class="fa fa-chevron-left" ></i>',
+              prevArrow: '<i class="fa fa-chevron-right" ></i>',
+              // prevArrow: '<button class="leftRs" style="left: 30px;"><i class="fa fa-angle-left"></i></button>',
+              // nextArrow: '<button class="rightRs" style="right: 30px;"><i class="fa fa-angle-right"></i></button>',
 
-            //   responsive: [
-            //     {
-            //       breakpoint: 1199,
-            //       settings: {
-            //         slidesToShow: 3,
-            //         infinite: true
-            //       }
-            //     },
-            //     {
-            //       breakpoint: 767,
-            //       settings: {
-            //         slidesToShow: 2,
-            //       }
-            //     },
-            //     {
-            //       breakpoint: 639,
-            //       settings: {
-            //         slidesToShow: 1,
-            //         slidesToScroll: 1
-            //       }
-            //     }
+              responsive: [
+                {
+                  breakpoint: 1199,
+                  settings: {
+                    slidesToShow: 3,
+                    infinite: true
+                  }
+                },
+                {
+                  breakpoint: 767,
+                  settings: {
+                    slidesToShow: 2,
+                  }
+                },
+                {
+                  breakpoint: 639,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                  }
+                }
 
-            //   ]
-            // });
+              ]
+            });
           }, 0);
         }
         $('.slick2').fadeIn(500).delay(200);

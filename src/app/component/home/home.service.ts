@@ -10,13 +10,14 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class HomeService {
-  baseUrl = environment.apiUrl;
-
+  baseUrl = environment.userurl;
+  listurl = environment.listurl
+  producturl = environment.producturl;
 
   constructor(private http: HttpClient) { }
    
     Getall_cat(): Observable<any> {
-      return this.http.get(this.baseUrl + 'Getallcat').pipe(
+      return this.http.get(this.listurl + 'Category/').pipe(
           tap(_ => {
           }, error => {
             console.log(error);
@@ -24,7 +25,7 @@ export class HomeService {
         );
     }
     Getlikeforyou(): Observable<any> {
-      return this.http.get(this.baseUrl + 'getFunProductsHome/').pipe(
+      return this.http.get(this.producturl + 'Recommended/').pipe(
           tap(_ => {
           }, error => {
             console.log(error);
@@ -33,7 +34,7 @@ export class HomeService {
     }
 
     Get_productfromAll(): Observable<any> {
-      return this.http.get(this.baseUrl + 'getProductsfromAllCAtHome/').pipe(
+      return this.http.get(this.producturl + 'DailyDeals/').pipe(
           tap(_ => {
           }, error => {
             console.log(error);
@@ -42,7 +43,7 @@ export class HomeService {
     }
 
     GetAllFeaturedProducts(): Observable<any> {
-      return this.http.get(this.baseUrl + 'getFeaturedProductHome/').pipe(
+      return this.http.get(this.producturl + 'FeatureDeals/').pipe(
           tap(_ => {
           }, error => {
             console.log(error);

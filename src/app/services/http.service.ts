@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import 'rxjs/add/operator/map';
 import { Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
@@ -9,9 +9,9 @@ import { environment } from '../../environments/environment';
   providedIn: 'root'
 })
 export class HttpService {
-  baseUrl = environment.apiUrl;
+  baseUrl = environment.listurl;
   userUrl = environment.userurl;
-  loginUrl= environment.usman;
+  loginUrl= environment.loginUrl;
    
 
 
@@ -19,8 +19,13 @@ export class HttpService {
 
   }
  
+  get_token(){
+    return localStorage.getItem('token')
+  }
+
+
   GetAllCategories(): Observable<any> {
-    return this.http.get(this.baseUrl + 'Getallcat').pipe(
+    return this.http.get(this.baseUrl + 'Category/').pipe(
         tap(_ => {
         }, error => {
           console.log(error);
@@ -29,7 +34,7 @@ export class HttpService {
   }
     // User Login APi
     login(auth): Observable<any> {
-      const s = this.http.post(this.loginUrl + '/api-token-auth/', auth)
+      const s = this.http.post(this.loginUrl + 'api-token-auth/', auth)
         .pipe(
           tap(_ => {
           }, error => {
@@ -41,7 +46,7 @@ export class HttpService {
 
      // User Login APi
      IsActive(auth): Observable<any> {
-      const s = this.http.post(this.userUrl + 'IsActive/', auth)
+      const s = this.http.post(this.loginUrl + 'User/IsActive/', auth)
         .pipe(
           tap(_ => {
           }, error => {
@@ -54,6 +59,20 @@ export class HttpService {
 // User Login APi
   register(auth): Observable<any> {
   const s = this.http.post(this.userUrl + 'SignUp/', auth)
+    .pipe(
+      tap(_ => {
+      }, error => {
+        console.log(error)
+      })
+    );
+  return s;
+}
+// User Login APi
+Add_new_product(auth1 ): Observable<any> {
+  //  let auth =auth1+auth2+auth3
+  
+
+  const s = this.http.post(this.loginUrl + 'Product/', auth1)
     .pipe(
       tap(_ => {
       }, error => {
