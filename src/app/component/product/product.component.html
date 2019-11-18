@@ -3,30 +3,384 @@
     <div class="product">
       
       <div class="side-bar">
-        <h6>Product Type</h6>
+        <p>Shop by Category</p>
         <ul class="check-box-list">
           <li>
-            <label>
-              <input type="radio" name="mode" value="create">
-              <span>create table</span>
-           </label>
+            <a href="">Cell Phone & Smartphone Parts</a>
           </li>
           <li>
-              <label>
-                  <input type="radio" name="mode" value="create">
-                  <span>create table</span>
-               </label>
+            <div id="accordion">
+              <div class="card">
+                <div class="card-header" id="heading-1">
+                  <h5 class="mb-0">
+                    <a role="button" data-toggle="collapse" href="#collapse-1" aria-expanded="false" aria-controls="collapse-1">
+                      Cell Phone Accessories
+                    </a>
+                  </h5>
+                </div>
+                <div id="collapse-1" class="collapse" data-parent="#accordion" aria-labelledby="heading-1">
+                  <div class="card-body">
+                    <ul>
+                      <li>
+                        <a href="">See all in Cell Phone Accessories</a>
+                      </li>
+                      <li>
+                        <a href="">Cell Phone Accessory Bundles</a>
+                      </li>
+                      <li>
+                        <a href="">Cell Phone Armbands</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+              <!--/ Panel -->
           </li>
           <li>
-              <label>
-                  <input type="radio" name="mode" value="create">
-                  <span>create table</span>
-               </label>
+            <div id="accordion">
+              <div class="card">
+                <div class="card-header" id="heading-1">
+                  <h5 class="mb-0">
+                    <a role="button" data-toggle="collapse" href="#collapse-2" aria-expanded="false" aria-controls="collapse-1">
+                      Cell Phone Cards & SIM Cards
+                    </a>
+                  </h5>
+                </div>
+                <div id="collapse-2" class="collapse" data-parent="#accordion" aria-labelledby="heading-1">
+                  <div class="card-body">
+                    <ul>
+                      <li>
+                        <a href="">See all in Cell Phone Accessories</a>
+                      </li>
+                      <li>
+                        <a href="">Cell Phone Accessory Bundles</a>
+                      </li>
+                      <li>
+                        <a href="">Cell Phone Armbands</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="">Cell Phone Displays</a>
+          </li>
+          <li>
+            <a href="">Cell Phones & Accessories Mixed Lots</a>
+          </li>
+          <li>
+            <a href="">Cell Phones & Smartphones</a>
+          </li>
+          <li>
+            <a href="">PDA Accessories</a>
+          </li>
+          <li>
+            <a href="">PDAs</a>
+          </li>
+          <li>
+            <div id="accordion">
+              <div class="card">
+                <div class="card-header" id="heading-1">
+                  <h5 class="mb-0">
+                    <a role="button" data-toggle="collapse" href="#collapse-3" aria-expanded="false" aria-controls="collapse-1">
+                      Cell Phone Accessories
+                    </a>
+                  </h5>
+                </div>
+                <div id="collapse-3" class="collapse" data-parent="#accordion" aria-labelledby="heading-1">
+                  <div class="card-body">
+                    <ul>
+                      <li>
+                        <a href="">See all in Cell Phone Accessories</a>
+                      </li>
+                      <li>
+                        <a href="">Cell Phone Accessory Bundles</a>
+                      </li>
+                      <li>
+                        <a href="">Cell Phone Armbands</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="">Smart Watches</a>
+          </li>
+          <li>
+            <a href="">Vintage Cell Phones</a>
           </li>
         </ul>
+
+        <p>Price</p>
+          <ul class="check-box-list">
+            <li>
+                <form id="radio_btn_select">
+                    <div class="d-block">
+                        <input type = "radio" name = "radSize" id = "sizeSmall" value = "small" />
+                        <label for = "sizeSmall"> Under $35.00</label>
+                    </div>
+                    <div class="d-block">
+                        <input type = "radio" name = "radSize" id = "sizeMed" value = "medium" />
+                        <label for = "sizeMed"> Over $35.00</label> 
+                    </div>
+                  </form>
+            </li>
+            <li class="price-limit">
+              <span>$</span>
+              <input type="text">
+              <span>- $</span>
+              <input type="text">
+              <button>
+                  <i class="fa fa-play"></i>
+              </button>
+            </li>
+          </ul>
+
       </div>
       <div class="product-body">
+        <p>Customized Mobile Phone Cases - Covers in Pakistan</p>
+        <div class="view-bar">
+          <span>
+            1175179 items found
+          </span>
+          <div class="change-view">
+            
+            <div class="view-btn">
+              <P>View: </P>
+              
+                  <i (click)="grid()" class="fa fa-th"></i>
+            
+                  <i (click)="list()" class="fa fa-th-list"></i>
+              
+            </div>
+          </div>
+        </div>
 
+        <!-- Start Grid View -->
+        <div class="Grid-view">
+          <div class="row">
+            <div class="col-lg-3">
+              <div class="grid-box">
+                <div class="pro-img">
+                  <img src="https://static-01.daraz.pk/p/bf1f98b539dee61818c7085d786db5e2.jpg">
+                </div>
+                <p class="title">IPhone 7 Plus Transparent Cover TPU</p>
+                <p class="price">$ 11.11</p>
+                <ul class="rating">
+                  <li>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </li>
+                </ul>
+                <button>
+                  Add to card
+                </button>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="grid-box">
+                <div class="pro-img">
+                  <img src="https://static-01.daraz.pk/p/bf1f98b539dee61818c7085d786db5e2.jpg">
+                </div>
+                <p class="title">IPhone 7 Plus Transparent Cover TPU</p>
+                <p class="price">$ 11.11</p>
+                <ul class="rating">
+                  <li>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </li>
+                </ul>
+                <button>
+                  Add to card
+                </button>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="grid-box">
+                <div class="pro-img">
+                  <img src="https://static-01.daraz.pk/p/bf1f98b539dee61818c7085d786db5e2.jpg">
+                </div>
+                <p class="title">IPhone 7 Plus Transparent Cover TPU</p>
+                <p class="price">$ 11.11</p>
+                <ul class="rating">
+                  <li>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </li>
+                </ul>
+                <button>
+                  Add to card
+                </button>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="grid-box">
+                <div class="pro-img">
+                  <img src="https://static-01.daraz.pk/p/bf1f98b539dee61818c7085d786db5e2.jpg">
+                </div>
+                <p class="title">IPhone 7 Plus Transparent Cover TPU</p>
+                <p class="price">$ 11.11</p>
+                <ul class="rating">
+                  <li>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </li>
+                </ul>
+                <button>
+                  Add to card
+                </button>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="grid-box">
+                <div class="pro-img">
+                  <img src="https://static-01.daraz.pk/p/bf1f98b539dee61818c7085d786db5e2.jpg">
+                </div>
+                <p class="title">IPhone 7 Plus Transparent Cover TPU</p>
+                <p class="price">$ 11.11</p>
+                <ul class="rating">
+                  <li>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </li>
+                </ul>
+                <button>
+                  Add to card
+                </button>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="grid-box">
+                <div class="pro-img">
+                  <img src="https://static-01.daraz.pk/p/bf1f98b539dee61818c7085d786db5e2.jpg">
+                </div>
+                <p class="title">IPhone 7 Plus Transparent Cover TPU</p>
+                <p class="price">$ 11.11</p>
+                <ul class="rating">
+                  <li>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </li>
+                </ul>
+                <button>
+                  Add to card
+                </button>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="grid-box">
+                <div class="pro-img">
+                  <img src="https://static-01.daraz.pk/p/bf1f98b539dee61818c7085d786db5e2.jpg">
+                </div>
+                <p class="title">IPhone 7 Plus Transparent Cover TPU</p>
+                <p class="price">$ 11.11</p>
+                <ul class="rating">
+                  <li>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </li>
+                </ul>
+                <button>
+                  Add to card
+                </button>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="grid-box">
+                <div class="pro-img">
+                  <img src="https://static-01.daraz.pk/p/bf1f98b539dee61818c7085d786db5e2.jpg">
+                </div>
+                <p class="title">IPhone 7 Plus Transparent Cover TPU</p>
+                <p class="price">$ 11.11</p>
+                <ul class="rating">
+                  <li>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </li>
+                </ul>
+                <button>
+                  Add to card
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Grid View -->
+
+        <!-- Start List View -->
+        <div class="List-view">
+            <div class="row">
+              <div class="col-lg-12">
+                
+                <div class="list-box row">
+                    <div class="col-lg-3">
+                      <div class="pro-img">
+                        <img src="https://static-01.daraz.pk/p/bf1f98b539dee61818c7085d786db5e2.jpg">
+                      </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <p class="title">IPhone 7 Plus Transparent Cover TPU</p>
+                        <ul class="detail-list">
+                          <li>High quality and unique case cover for your phone</li>
+                          <li>Protects your Phone from scratches, dirt and bumps</li>
+                          <li>Precise openings on the case, allowing
+                            access to all controls and features of the Phone</li>
+                          <li>Made of durable material</li>
+                        </ul>
+                        <div class="add-card">
+                            <div class="price">
+                                <p class="price">$11.11</p>
+                                <ul class="rating">
+                                    <li>
+                                      <i class="fa fa-star"></i>
+                                      <i class="fa fa-star"></i>
+                                      <i class="fa fa-star"></i>
+                                      <i class="fa fa-star"></i>
+                                      <i class="fa fa-star"></i>
+                                    </li>
+                                  </ul>
+                            </div>
+                            <button>
+                                Add to card
+                            </button>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+              </div>
+            </div>
+        </div>
+        <!-- End List View -->
       </div>
     </div>
   </div>

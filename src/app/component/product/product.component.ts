@@ -3,6 +3,8 @@ import { Component, OnInit , Inject, PLATFORM_ID } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { FormBuilder } from '@angular/forms';
 import { HttpService } from 'src/app/services/http.service';
+declare var $:any;
+
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
@@ -15,6 +17,16 @@ export class ProductComponent implements OnInit {
   private _nav: Router) { }
 
   ngOnInit() {
+   
+  }
+
+  grid(){
+    $('.Grid-view').show();
+    $('.List-view').hide();
+  };
+  list() {
+    $('.List-view').show();
+    $('.Grid-view').hide();
   }
 
 }
