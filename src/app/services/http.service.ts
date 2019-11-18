@@ -90,7 +90,7 @@ Add_new_product(auth1 ): Observable<any> {
     );
   return s;
 }
-
+//gget images
 images(input_file): Observable<any> {
   //  let auth =auth1+auth2+auth3
   console.log(input_file)
@@ -107,6 +107,20 @@ images(input_file): Observable<any> {
   return s;
 }
 
+
+//change password
+changepassword(uth): Observable<any> {
+ 
+  const s = this.http.post(this.userUrl + 'ChangePassword/',uth )
+    .pipe(
+      tap(_ => {
+      }, error => {
+        console.log(error)
+      })
+    );
+  return s;
+}
+// /User/ChangePassword/
 // User verfiy  APi
 UserConfirm(auth): Observable<any> {
   const s = this.http.post(this.userUrl +'EmailConfirm/', auth)

@@ -21,7 +21,9 @@ const routes: Routes = [
       { path: 'signup', loadChildren: './authentication/user-signup/signup.module#UsersignupModule'},
       { path: 'terms', loadChildren: './component/staticpage/terms-use/terms-use.module#TermsUseModule'},
       { path: 'privacy-policy', loadChildren: './component/staticpage/privacy-policy/privacy-policy.module#PrivacyPolicyModule'}, 
-      { path: 'product', loadChildren: './component/product/product.module#ProductModule'},     
+      { path: 'product', loadChildren: './component/product/product.module#ProductModule'},   
+      { path: 'checkout', loadChildren: './component/user-dashboard/check-out/checkout.module#checkoutModule' },
+  
     ]
   },
   {
@@ -29,7 +31,6 @@ const routes: Routes = [
     children: [
       { path: 'user-dashboard', loadChildren: './component/user-dashboard/user-main-dashboard/user-main.module#usermainModule' },
       { path: 'changepassword', loadChildren: './component/user-dashboard/seller-setting/seller-setting.module#SellerSettingModule' },
-      { path: 'checkout', loadChildren: './component/user-dashboard/check-out/checkout.module#checkoutModule' },
 
       { path: 'watchlist', loadChildren: './component/user-dashboard/watchlist/watchlist.module#WatchlistModule' },
       

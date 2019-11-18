@@ -26,15 +26,15 @@ export class SellerSettingComponent implements OnInit {
   SessionstoreName: any;
   signupForm: FormGroup;
   constructor(@Inject(PLATFORM_ID) private platformId: Object,
-              private obj: HttpService,private fb: FormBuilder,
+              private http: HttpService,private fb: FormBuilder,
               private _nav: Router) { }
 
   ngOnInit() {
-    if (isPlatformBrowser(this.platformId)) {
+    // if (isPlatformBrowser(this.platformId)) {
       this.signupForm = this.fb.group({
-        'old': ['', Validators.compose([Validators.required])],
-        'new1': ['', Validators.compose([Validators.required])],
-        'new2': ['', Validators.compose([Validators.required])],
+        current: ['', Validators.compose([Validators.required])],
+        pass1: ['', Validators.compose([Validators.required])],
+        pass2: ['', Validators.compose([Validators.required])],
   
       },{
         validator: PasswordValidation.MatchPassword // your validation method
@@ -42,45 +42,51 @@ export class SellerSettingComponent implements OnInit {
 
       
   
-    }
+    // }
   }
 
-
-  updatePassword(old: string, new1: string, new2: string) {
+  // "current":"123",
+  // "pass1":"admin123",
+  // "pass2":"admin123"
+  updatePassword() {
      
-
+let auth={
+   "current":this.signupForm.controls.current.value,
+  "pass1":this.signupForm.controls.pass1.value,
+  "pass2":this.signupForm.controls.pass2.value
+}
  
-      // this.obj.changepass(old, new1, new2).subscribe((data) => {
-      //     /* this function is executed every time there's a new output */
-      //     console.log("VALUE RECEIVED: "+data['msg']);
-      //   //   // if(response.json() == "PasswordChanged"){  
-      //   //     return Response({'msg':'PasswordChanged'},status=status.HTTP_200_OK)
-      //   // else:
-      //   //     return Response({'msg':'something went wrong'},status=status.HTTP_400_BAD_REQUEST)  
-      //   if ( data.msg == "PasswordChanged") { 
-      //     Swal.fire({
-      //       title: 'You have been successfully update your passwrod',
-      //       type: 'success',
-      //       confirmButtonColor: '#3085d6',
-      //       confirmButtonText: 'OK'
-      //     })
-      //           // Swal.fire('You have been successfully update your passwrod.','','success');
-      //   }
-      //   else if (data.msg == "something went wrong"){
-      //     Swal.fire({
-      //       title: 'Something Went Wrong',
-      //       type: 'error',
-      //       confirmButtonColor: '#3085d6',
-      //       confirmButtonText: 'OK'
-      //     })
-      //     // Swal.fire('You have been successfully update your passwrod.','','success');
+      this.http.changepassword(auth).subscribe((data) => {
+          /* this function is executed every time there's a new output */
+          console.log("VALUE RECEIVED: "+data['msg']);
+        //   // if(response.json() == "PasswordChanged"){  
+        //     return Response({'msg':'PasswordChanged'},status=status.HTTP_200_OK)
+        // else:
+        //     return Response({'msg':'something went wrong'},status=status.HTTP_400_BAD_REQUEST)  
+        if ( data.msg == "PasswordChanged") { 
+          Swal.fire({
+            title: 'You have been successfully update your passwrod',
+            type: 'success',
+            confirmButtonColor: '#3085d6',
+            confirmButtonText: 'OK'
+          })
+                // Swal.fire('You have been successfully update your passwrod.','','success');
+        }
+        else if (data.msg == "something went wrong"){
+          Swal.fire({
+            title: 'Something Went Wrong',
+            type: 'error',
+            confirmButtonColor: '#3085d6',
+            confirmButtonText: 'OK'
+          })
+          // Swal.fire('You have been successfully update your passwrod.','','success');
 
-      //   }
-      //     // }
-      //     // else {
-      //     // }
-      //   }
-      //   );        
+        }
+          // }
+          // else {
+          // }
+        }
+        );        
       
 
 
