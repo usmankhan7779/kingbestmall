@@ -29,9 +29,10 @@ const routes: Routes = [
     children: [
       { path: 'user-dashboard', loadChildren: './component/user-dashboard/user-main-dashboard/user-main.module#usermainModule' },
       { path: 'changepassword', loadChildren: './component/user-dashboard/seller-setting/seller-setting.module#SellerSettingModule' },
+      { path: 'checkout', loadChildren: './component/user-dashboard/check-out/checkout.module#checkoutModule' },
 
       { path: 'watchlist', loadChildren: './component/user-dashboard/watchlist/watchlist.module#WatchlistModule' },
-
+      
       // { path: 'my-bids-buyer', loadChildren: './my-bids-buyer/my-bids-buyer.module#MyBidsBuyerModule', canActivate: [AuthGuard] },
       // { path: 'buyer-orders', loadChildren: './buyer-order/buyer-order.module#BuyerOrderModule', canActivate: [AuthGuard] },
       // { path: 'buyer-invoice', loadChildren: './buyer-invoice/buyer-invoice.module#BuyerInvoiceModule', canActivate: [AuthGuard] },

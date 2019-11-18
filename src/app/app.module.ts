@@ -52,6 +52,7 @@ import { SlickModule } from 'ngx-slick';
 import { HttpService } from './services/http.service'; 
 import { AuthGuard } from './services/AuthGuard/auth.guard'; 
 import { UserDashboardComponent } from './layouts/user-dashboard/user-dashboard.component';
+import { CheckOutComponent } from './component/user-dashboard/check-out/check-out.component';
 
 // import { WatchlistComponent } from './component/user-dashboard/watchlist/watchlist.component'; 
 
@@ -91,10 +92,7 @@ import { UserDashboardComponent } from './layouts/user-dashboard/user-dashboard.
     FormsModule,
     MatFormFieldModule
   ],
-  declarations: [
-    // WatchlistComponent
-    // ProductComponent
-],
+  declarations: [],
 })
 export class MaterialModule { }
 

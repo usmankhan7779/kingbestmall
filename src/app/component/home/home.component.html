@@ -113,7 +113,7 @@
 
                             <div class="cat-box" *ngFor="let category of GetallCat">
                                     <a [routerLink]="['/category-detail']" [queryParams]="{ CatName:  category.Cat_Name }">
-                                        <img style="border: none" class="img" src="{{imageurls}}{{category.Pic}}">
+                                        <img style="border: none" class="img" src="{{category.Pic}}">
                                       </a>
                                 <!-- <img  src="{{imageurls}}{{category.Pic}}"> -->
                                 <a class="slider-img" [routerLink]="['/category-detail']" [queryParams]="

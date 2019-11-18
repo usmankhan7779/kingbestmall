@@ -14,9 +14,29 @@
                 class="fa fa-cloud-upload"></i>
               <h4 >Upload Product photos</h4>
               <p >It must be a head-shot photo</p><label 
-                class="uploadBox">Click to Upload Cover Photos <input accept="image/*"
-                  class="file" data-preview-file-type="text" id="file1" multiple="" name="file" type="file"></label>
+                class="uploadBox">Click to Upload Cover Photos
+                 <input type="file" #fileImportInput id="file1" name="file" class="file" data-preview-file-type="text"
+                 (change)="onChange($event)" multiple accept=".jpg, .jpeg, .png">
+                </label>
             </div>
+            <i (click)="upload()">get </i>
+            <ng-container *ngFor="let img of url; let i=index">
+              <div class="img-box">
+                <i class="fas fa-times" (click)="removepic(i)"></i>
+  
+                <img [src]="img">
+              </div>
+  
+            </ng-container>
+            <!-- <div class="uploadphotobx"> <i class="fas fa-cloud-upload-alt"></i>
+              <h4>Upload Product photos</h4>
+              <p>It must be a head-shot photo</p>
+              <label class="uploadBox">Click to Upload Cover Photos
+                <input type="file" #fileImportInput id="file1" name="file" class="file" data-preview-file-type="text"
+                  (change)="onChange($event.target.files)" multiple accept="image/*">
+              </label><br>
+            </div> -->
+
           </div>
           <div class="mt10">
             <mat-form-field class="w50">
@@ -59,26 +79,50 @@
                 *ngIf="secondFormGroup.controls['Cat_Name'].value == '' || !secondFormGroup.controls['Cat_Name'].value">
                 <strong>Please Enter the Product Title</strong></mat-error>
             </mat-form-field> -->
-            <mat-select   class="col-md-push-6" name="Subcat" formControlName="Cat_Name">
-              <!-- <mat-optgroup *ngFor="let item of GetAllSubCat" label="{{ item.Cat_Name}}"> -->
-                <!-- <ng-container *ngFor="let item_sub of GetAllSubCat"> -->
-                  <mat-option  *ngFor="let item_sub of GetAllSubCat" [value]="item.Cat_Name">
+            <!-- <mat-select   class="col-md-push-6" name="Subcat" formControlName="Cat_Name">
+               
+                  <mat-option  *ngFor="let item_sub of GetAllSubCat"  >
                     {{ item.Cat_Name }}
                   </mat-option>
-                <!-- </ng-container> -->
-              <!-- </mat-optgroup> -->
+               
+
+
+            </mat-select> -->
+               
+            <mat-form-field  class="w100">
+              <!-- <mat-option (click)="setPage(1);refresh()" >ALL</mat-option> -->
+            <mat-select placeholder="Select Category"    #val  required  name="Subcat" formControlName="Cat_Name"  >
+              
+              <mat-option *ngFor="let data of GetAllCat " (click)="getvalue_2(data.Cat_Name,data.id)" [value]="data.Cat_Name" title="{{data.Cat_Name| titlecase}}"  >
+                {{data.Cat_Name | titlecase}}
+
+              </mat-option>
 
 
             </mat-select>
+          </mat-form-field>               
+
         </div>
          
           <div class="col-lg-6">
-              <mat-form-field class="w100">
+              <!-- <mat-form-field class="w100">
                   <input matInput placeholder="Select Sub Category" formControlName="Sub_Cat_Name" required>
                   <mat-error
                   *ngIf="secondFormGroup.controls['Sub_Cat_Name'].value == '' || !secondFormGroup.controls['Sub_Cat_Name'].value">
                   <strong>Please Enter the Product Title</strong></mat-error>
-              </mat-form-field>
+              </mat-form-field> -->
+              <mat-form-field  class="w100">
+                <!-- <mat-option (click)="setPage(1);refresh()" >ALL</mat-option> -->
+              <mat-select placeholder="Select Sub Category"   #val  required  name="Sub_Cat_Name" formControlName="Sub_Cat_Name"  >
+                
+                <mat-option *ngFor="let data of GetAllSubCat"   [value]="data.Sub_Cat_Name" title="{{data.Sub_Cat_Name| titlecase}}"  >
+                  {{data.Sub_Cat_Name | titlecase}}
+  
+                </mat-option>
+  
+  
+              </mat-select>
+            </mat-form-field>
           </div>
          
 
@@ -143,16 +187,23 @@
                   <strong>Please Enter the Product Title</strong></mat-error>
                 </mat-form-field>
           </div>
-
-<!--         
+          <div class="col-lg-4">
+            <mat-form-field class="w100">
+                <input matInput placeholder="Product Purchase Price" formControlName="PurchasedPrice" required>
+                <mat-error
+                *ngIf="thirdFromGroup.controls['PurchasedPrice'].value == '' || !thirdFromGroup.controls['PurchasedPrice'].value">
+                <strong>Please Enter the Product Purchase Price</strong></mat-error>
+              </mat-form-field>
+        </div>
+          
           <div class="col-lg-4">
               <mat-form-field class="w100">
-                  <input matInput placeholder="Product Max Quantity" formControlName="MaxQuantity" required>
+                  <input matInput placeholder="Product Sale Price" formControlName="FixedPrice" required>
                   <mat-error
-                  *ngIf="thirdFromGroup.controls['MaxQuantity'].value == '' || !thirdFromGroup.controls['MaxQuantity'].value">
-                  <strong>Please Enter the Product Title</strong></mat-error>
+                  *ngIf="thirdFromGroup.controls['FixedPrice'].value == '' || !thirdFromGroup.controls['FixedPrice'].value">
+                  <strong>Please Enter the Product Sale Price</strong></mat-error>
                 </mat-form-field>
-          </div> -->
+          </div>
              
           <div class="col-lg-4">
               <mat-form-field class="w100">
@@ -200,7 +251,7 @@
       </mat-form-field> -->
       <div class="tabs-btn">
         <button mat-button matStepperPrevious>Back</button>
-        <button class="pull-right" mat-button (click)="onRegister()">Reset</button>
+        <button class="pull-right" mat-button (click)="post_list()">Reset</button>
       </div>
       </form>
     </mat-step>

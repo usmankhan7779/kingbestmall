@@ -32,6 +32,17 @@ export class HttpService {
         })
       );
   }
+  GetAllCategories_sub(id): Observable<any> {
+    return this.http.get( 'https://apis.kingbestmall.com/'+id+'/List/SubCategory/').pipe(
+        tap(_ => {
+        }, error => {
+          console.log(error);
+        })
+      );
+  }
+
+  // http://192.168.29.148:8000/1/List/SubCategory/
+
     // User Login APi
     login(auth): Observable<any> {
       const s = this.http.post(this.loginUrl + 'api-token-auth/', auth)
@@ -70,9 +81,23 @@ export class HttpService {
 // User Login APi
 Add_new_product(auth1 ): Observable<any> {
   //  let auth =auth1+auth2+auth3
-  
-
   const s = this.http.post(this.loginUrl + 'Product/', auth1)
+    .pipe(
+      tap(_ => {
+      }, error => {
+        console.log(error)
+      })
+    );
+  return s;
+}
+
+images(input_file): Observable<any> {
+  //  let auth =auth1+auth2+auth3
+  console.log(input_file)
+  let uth ={
+    "input_file":input_file 
+  }
+  const s = this.http.post(this.loginUrl + 'picupload',uth )
     .pipe(
       tap(_ => {
       }, error => {
