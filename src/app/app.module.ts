@@ -52,8 +52,7 @@ import { SlickModule } from 'ngx-slick';
 import { HttpService } from './services/http.service'; 
 import { AuthGuard } from './services/AuthGuard/auth.guard'; 
 import { UserDashboardComponent } from './layouts/user-dashboard/user-dashboard.component';
-import { ImageZoomModule } from 'angular2-image-zoom';
-
+// import { ImageZoomModule } from 'angular2-image-zoom'; 
 // import { WatchlistComponent } from './component/user-dashboard/watchlist/watchlist.component'; 
 
 @NgModule({
