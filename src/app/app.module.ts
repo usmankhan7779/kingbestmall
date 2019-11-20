@@ -91,7 +91,9 @@ import { UserDashboardComponent } from './layouts/user-dashboard/user-dashboard.
     FormsModule,
     MatFormFieldModule
   ],
-  declarations: [],
+  declarations: [
+    
+  ],
 })
 export class MaterialModule { }
 

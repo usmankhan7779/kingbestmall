@@ -34,6 +34,8 @@ const routes: Routes = [
 
       { path: 'watchlist', loadChildren: './component/user-dashboard/watchlist/watchlist.module#WatchlistModule' },
       
+      { path: 'mypurchase', loadChildren: './component/user-dashboard/my-purchase/my-purchase.module#MyPurchaseModule' },
+
       // { path: 'my-bids-buyer', loadChildren: './my-bids-buyer/my-bids-buyer.module#MyBidsBuyerModule', canActivate: [AuthGuard] },
       // { path: 'buyer-orders', loadChildren: './buyer-order/buyer-order.module#BuyerOrderModule', canActivate: [AuthGuard] },
       // { path: 'buyer-invoice', loadChildren: './buyer-invoice/buyer-invoice.module#BuyerInvoiceModule', canActivate: [AuthGuard] },
