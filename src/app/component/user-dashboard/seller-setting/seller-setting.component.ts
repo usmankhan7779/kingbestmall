@@ -65,7 +65,7 @@ let auth={
         //     return Response({'msg':'something went wrong'},status=status.HTTP_400_BAD_REQUEST)  
         if ( data.msg == "PasswordChanged") { 
           Swal.fire({
-            title: 'You have been successfully update your passwrod',
+            title: 'You have been successfully update your password',
             type: 'success',
             confirmButtonColor: '#3085d6',
             confirmButtonText: 'OK'

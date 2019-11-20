@@ -239,8 +239,7 @@ export class AddNewProductsComponent implements OnInit {
     // }
   }
   getvalue_2(val1, val2) {
-    alert(val1)
-    alert(val2)
+   
     this.http.GetAllCategories_sub(val2).subscribe(resSlidersData => this.GetAllSubCat = resSlidersData);
   }
 

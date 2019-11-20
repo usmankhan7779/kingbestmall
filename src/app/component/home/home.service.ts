@@ -4,6 +4,7 @@ import 'rxjs/add/operator/map';
 import { Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
+import { Http } from '@angular/http';
  
 
 @Injectable({
@@ -14,10 +15,10 @@ export class HomeService {
   listurl = environment.listurl
   producturl = environment.producturl;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient,private https:Http) { }
    
     Getall_cat(): Observable<any> {
-      return this.http.get(this.listurl + 'Category/').pipe(
+      return this.https.get(this.listurl + 'Category/').pipe(
           tap(_ => {
           }, error => {
             console.log(error);

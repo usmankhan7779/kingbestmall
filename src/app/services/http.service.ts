@@ -111,7 +111,7 @@ images(input_file): Observable<any> {
 //change password
 changepassword(uth): Observable<any> {
  
-  const s = this.http.post(this.userUrl + 'ChangePassword/',uth )
+  const s = this.http.put(this.userUrl + 'ChangePassword/',uth )
     .pipe(
       tap(_ => {
       }, error => {

@@ -3,6 +3,7 @@ import {tap} from 'rxjs/operators';
 import {HttpEvent, HttpHandler, HttpInterceptor, HttpRequest, HttpResponse} from '@angular/common/http';
 import {Observable} from 'rxjs/Observable';
 import { HttpService } from '../http.service';
+import { IfStmt } from '@angular/compiler';
 
 
 @Injectable()
@@ -18,7 +19,7 @@ export class HttpInterceptors implements HttpInterceptor {
     // how to update the request Parameters
     let updatedRequest: any;
     let token = this.injector.get(HttpService)
-    // if (token ) {
+    if (localStorage.getItem('token')!= null ) {
       // alert(token)
       
       console.log(localStorage.getItem('token'), 'Client Tag');
@@ -36,16 +37,18 @@ export class HttpInterceptors implements HttpInterceptor {
         
 
       });
-    // } else {
-    //   updatedRequest = request.clone({
-    //     // headers: request.headers.set('Content-Type', 'application/json');
+    } else if (localStorage.getItem('token') == null)
+     {
+       alert('esle if ')
+      updatedRequest = request.clone({
+        // headers: request.headers.set('Content-Type', 'application/json');
 
-    //     setHeaders: {
-    //       'Content-Type': 'application/json',
-    //     }
+        setHeaders: {
+          'Content-Type': 'application/json',
+        }
 
-    //   });
-    // }
+      });
+    }
 
     return next.handle(updatedRequest).pipe(
       tap(
