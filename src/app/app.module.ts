@@ -92,7 +92,9 @@ import { CheckOutComponent } from './component/user-dashboard/check-out/check-ou
     FormsModule,
     MatFormFieldModule
   ],
-  declarations: [],
+  declarations: [
+    
+  ],
 })
 export class MaterialModule { }
 
