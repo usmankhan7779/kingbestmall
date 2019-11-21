@@ -8,7 +8,57 @@
         text-align: center;
         text-shadow: 1px 3px 4px #ccc;
     }
+    .table{
+        border-radius: 10px;
+        overflow: hidden;
+    }
     .pro-info{
         display: flex;
+        .product-img{
+            width: 100px;
+            img{
+                width: 100%;
+            }
+        }
+        p{
+            margin: 0 0 0 10px;
+        }
+    }
+    .pur-table{
+        thead{
+            tr{
+                background: #000;
+                color: #fff;
+                th{
+                    font-family: Montserrat-Regular;
+                }
+            }
+            .w-150{
+                width: 150px;
+            }
+        }
+        tbody{
+            tr{
+                background: #f2f2f2;
+                border-bottom: 1px solid #ccc;
+                td{
+                    border-top: 1px solid #b7b8b9;
+                }
+            }
+        }
+        button{
+            background: linear-gradient(90deg, #a91f73 0, #ff4270 100%);
+            width: 100%;
+            color: #fff;
+            border-radius: 50px;
+            padding: 2px;
+            margin-bottom: 10px;
+            border: 1px solid #ff4270 !important;
+            &:hover{
+                background: #fff;
+                border: 1px solid #ff4270 !important;
+                color: #ff4270 !important;
+            }
+        }
     }
 }
